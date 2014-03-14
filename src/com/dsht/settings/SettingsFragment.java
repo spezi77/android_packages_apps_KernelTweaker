@@ -160,7 +160,7 @@ public class SettingsFragment extends PreferenceFragment implements OnPreference
 			mColor.setEnabled((Boolean)newValue);
 			MainActivity.mAdapter.notifyDataSetChanged();
 			if(mPersonal.isChecked()) {
-				mPersonal.setChecked(false);
+				mPersonal.setChecked(true);
 			}
 			return true;
 		}
