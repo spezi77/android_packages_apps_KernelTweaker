@@ -86,7 +86,7 @@ public class ReviewBootPreferenceFragment extends PreferenceFragment {
 	String[] cpuquiet_govs;
 	String[] availTCP;
 	String[] readAheadKb = {"128","256","384","512","640","768","896","1024","1152",
-			"1280","1408","1536","1664","1792","1920","2048", "2176", "2304", "2432", "2560", 
+			"1280","1408","1536","1664","1792","1920","2048", "2176", "2304", "2432", "2560",
 			"2688", "2816", "2944", "3072", "3200", "3328", "3456", "3584", "3712", "3840", "3968", "4096"};
 	private static final String GPU_FREQUENCIES_FILE = "/sys/class/kgsl/kgsl-3d0/gpu_available_frequencies";
 	private static final String SCHEDULER_FILE = "/sys/block/mmcblk0/queue/scheduler";
@@ -208,11 +208,11 @@ public class ReviewBootPreferenceFragment extends PreferenceFragment {
 				}
 
 			}
-		} 
+		}
 
 		if(vddItems.size() != 0) {
 			String color = getResources().getStringArray(R.array.menu_colors)[2];
-			createPreference(mUv,"", 
+			createPreference(mUv,"",
 					getResources().getString(R.string.vdd_pref),
 					getResources().getString(R.string.vdd_desc),
 					color,
@@ -271,8 +271,8 @@ public class ReviewBootPreferenceFragment extends PreferenceFragment {
 	}
 
 
-	private void createPreference(PreferenceCategory mCategory,  
-			String fPath, String fName, String value, String color, 
+	private void createPreference(PreferenceCategory mCategory,
+			String fPath, String fName, String value, String color,
 			final String category, boolean excludeEdit) {
 
 		final CustomPreference pref = new CustomPreference(mContext, false, category);
@@ -299,7 +299,7 @@ public class ReviewBootPreferenceFragment extends PreferenceFragment {
 					et.setGravity(Gravity.CENTER_HORIZONTAL);
 					db.getAllItems();
 					builder.setView(v);
-					builder.setPositiveButton("ok", new DialogInterface.OnClickListener() {
+					builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
 
 						@Override
 						public void onClick(DialogInterface dialog, int which) {
@@ -315,7 +315,7 @@ public class ReviewBootPreferenceFragment extends PreferenceFragment {
 					dialog.show();
 					dialog.getWindow().getAttributes().windowAnimations = R.style.dialog_animation;
 					Window window = dialog.getWindow();
-					window.setLayout(800, LayoutParams.WRAP_CONTENT);
+					window.setLayout(400, LayoutParams.WRAP_CONTENT);
 					return true;
 				}
 
@@ -330,8 +330,8 @@ public class ReviewBootPreferenceFragment extends PreferenceFragment {
 	}
 
 
-	private void createListPreference(PreferenceCategory mCategory,  
-			String fPath, String fName, String value,String[] entries, String[] names, String color, 
+	private void createListPreference(PreferenceCategory mCategory,
+			String fPath, String fName, String value,String[] entries, String[] names, String color,
 			final String category, boolean excludeEdit) {
 
 		final CustomListPreference pref = new CustomListPreference(mContext, category);
