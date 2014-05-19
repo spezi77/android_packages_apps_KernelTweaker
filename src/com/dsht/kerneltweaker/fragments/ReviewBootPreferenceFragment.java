@@ -96,7 +96,6 @@ public class ReviewBootPreferenceFragment extends PreferenceFragment {
 	private static final String CPUQUIET_GOVERNORS = "/sys/devices/system/cpu/cpuquiet/available_governors";
 	private static final String TCP_OPTIONS = "sysctl net.ipv4.tcp_available_congestion_control";
 
-
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
