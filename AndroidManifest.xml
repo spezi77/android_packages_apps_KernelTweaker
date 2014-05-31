@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.dsht.kerneltweaker"
-    android:versionCode="18"
-    android:versionName="LS-0.0.1" >
+    android:versionCode="21"
+    android:versionName="LS-0.1.0" >
 
     <uses-sdk
         android:minSdkVersion="16"
