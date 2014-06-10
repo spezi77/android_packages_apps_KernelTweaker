@@ -20,6 +20,18 @@
             android:summary="@string/cpu_cpuquiet_desc"
             android:title="@string/cpu_cpuquiet_title" />
     </PreferenceCategory>
+    <PreferenceCategory
+        android:key="key_mpdecision_cat"
+        android:title="@string/mpdecision_category" >
+        <com.dsht.kerneltweaker.CustomPreference
+            android:key="key_mpdecision"
+            android:summary="@string/mpdecision_summary"
+            android:title="@string/mpdecision_title" />
+        <com.dsht.kerneltweaker.CustomPreference
+            android:key="key_thermal"
+            android:summary="@string/thermal_summary"
+            android:title="@string/thermal_title" />
+    </PreferenceCategory>
     <PreferenceCategory 
         android:key="key_advanced"
         android:title="@string/cpu_advanced" >

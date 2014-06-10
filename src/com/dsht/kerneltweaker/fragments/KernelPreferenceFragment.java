@@ -58,6 +58,8 @@ public class KernelPreferenceFragment extends PreferenceFragment implements OnPr
 	private CustomCheckBoxPreference mDoubleTap;
 	private CustomCheckBoxPreference mSweep2wake;
 	private CustomCheckBoxPreference mSweep2sleep;
+	private CustomCheckBoxPreference mTouch2wake;
+	private CustomPreference mT2wDelay;
 	private CustomCheckBoxPreference mIntelliPlug;
 	private CustomCheckBoxPreference mEcoMode;
 	private CustomPreference mVibration;
@@ -88,6 +90,8 @@ public class KernelPreferenceFragment extends PreferenceFragment implements OnPr
 	private static final String DT2W_FILE = "/sys/android_touch/doubletap2wake";
 	private static final String S2W_FILE = "/sys/android_touch/sweep2wake";
 	private static final String S2W_SLEEPONLY_FILE = "/sys/android_touch/s2w_s2sonly";
+	private static final String T2W_FILE = "/sys/devices/virtual/misc/touchwake/enabled";
+	private static final String T2W_DELAY_FILE = "/sys/devices/virtual/misc/touchwake/delay";
 	private static final String INTELLIPLUG_FILE = "/sys/module/intelli_plug/parameters/intelli_plug_active";
 	private static final String ECOMODE_FILE = "/sys/module/intelli_plug/parameters/eco_mode_active";
 	private static final String DYNFSYNC_FILE = "/sys/kernel/dyn_fsync/Dyn_fsync_active";
@@ -122,6 +126,8 @@ public class KernelPreferenceFragment extends PreferenceFragment implements OnPr
 		Helpers.setPermissions(READ_AHEAD_FILE);
 		Helpers.setPermissions(S2W_FILE);
 		Helpers.setPermissions(S2W_SLEEPONLY_FILE);
+		Helpers.setPermissions(T2W_FILE);
+		Helpers.setPermissions(T2W_DELAY_FILE);
 		Helpers.setPermissions(SCHEDULER_FILE);
 		Helpers.setPermissions(SPEAKER_BOOST_FILE);
 		Helpers.setPermissions(TEMP_FILE);
@@ -150,6 +156,8 @@ public class KernelPreferenceFragment extends PreferenceFragment implements OnPr
 		mDoubleTap = (CustomCheckBoxPreference) findPreference("key_dt2w_switch");
 		mSweep2wake = (CustomCheckBoxPreference) findPreference("key_s2w_switch");
 		mSweep2sleep = (CustomCheckBoxPreference) findPreference("key_s2ws_switch");
+		mTouch2wake = (CustomCheckBoxPreference) findPreference("key_t2w_switch");
+		mT2wDelay = (CustomPreference) findPreference("key_t2w_delay_switch");
 		mIntelliPlug = (CustomCheckBoxPreference) findPreference("key_intelliplug_switch");
 		mEcoMode = (CustomCheckBoxPreference) findPreference("key_ecomode_switch");
 		mVibration = (CustomPreference) findPreference("key_vibration");
@@ -163,6 +171,8 @@ public class KernelPreferenceFragment extends PreferenceFragment implements OnPr
 		mDoubleTap.setKey(DT2W_FILE);
 		mSweep2wake.setKey(S2W_FILE);
 		mSweep2sleep.setKey(S2W_SLEEPONLY_FILE);
+		mTouch2wake.setKey(T2W_FILE);
+		mT2wDelay.setKey(T2W_DELAY_FILE);
 		mIntelliPlug.setKey(INTELLIPLUG_FILE);
 		mEcoMode.setKey(ECOMODE_FILE);
 		mVibration.setKey(VIBRATION_FILE);
@@ -180,6 +190,8 @@ public class KernelPreferenceFragment extends PreferenceFragment implements OnPr
 		mDoubleTap.setCategory(category);
 		mSweep2wake.setCategory(category);
 		mSweep2sleep.setCategory(category);
+		mTouch2wake.setCategory(category);
+		mT2wDelay.setCategory(category);
 		mIntelliPlug.setCategory(category);
 		mEcoMode.setCategory(category);
 		mVibration.setCategory(category);
@@ -190,7 +202,9 @@ public class KernelPreferenceFragment extends PreferenceFragment implements OnPr
 		String[] readAheadKb = {"128","256","384","512","640","768","896","1024","1152",
 				"1280","1408","1536","1664","1792","1920","2048", "2176", "2304", "2432", "2560", 
 				"2688", "2816", "2944", "3072", "3200", "3328", "3456", "3584", "3712", "3840", "3968", "4096"};
+
 		color = "";
+
 		if(MainActivity.mPrefs.getBoolean(SettingsFragment.KEY_ENABLE_GLOBAL, false)) {
 			int col = MainActivity.mPrefs.getInt(SettingsFragment.KEY_GLOBAL_COLOR, Color.parseColor("#FFFFFF"));
 			color = "#"+Integer.toHexString(col);
@@ -217,6 +231,8 @@ public class KernelPreferenceFragment extends PreferenceFragment implements OnPr
 		mDoubleTap.setTitleColor(color);
 		mSweep2wake.setTitleColor(color);
 		mSweep2sleep.setTitleColor(color);
+		mTouch2wake.setTitleColor(color);
+		mT2wDelay.setTitleColor(color);
 		mIntelliPlug.setTitleColor(color);
 		mEcoMode.setTitleColor(color);
 		mVibration.setTitleColor(color);
@@ -230,11 +246,13 @@ public class KernelPreferenceFragment extends PreferenceFragment implements OnPr
 
 		mCpuScheduler.setSummary(Helpers.getCurrentScheduler());
 		mCpuReadAhead.setSummary(Helpers.getFileContent(new File(READ_AHEAD_FILE)));
+    mT2wDelay.setSummary(Helpers.getFileContent(new File(T2W_DELAY_FILE)));
 
 		mAdvancedScheduler.setOnPreferenceClickListener(this);
 		mCpuScheduler.setOnPreferenceChangeListener(this);
 		mCpuReadAhead.setOnPreferenceChangeListener(this);
 		mVibration.setOnPreferenceClickListener(this);
+		mT2wDelay.setOnPreferenceClickListener(this);
 
 		mKernelFsync.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
 
@@ -267,6 +285,25 @@ public class KernelPreferenceFragment extends PreferenceFragment implements OnPr
 					value = "1";
 				} else {
 					cmd = "echo 0 > "+DYNFSYNC_FILE;
+					value = "0";
+				}
+				CMDProcessor.runSuCommand(cmd);
+				updateDb(preference, value, ((CustomCheckBoxPreference) preference).isBootChecked());
+				return true;
+			}
+		});
+
+		mTouch2wake.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+
+			@Override
+			public boolean onPreferenceChange(Preference preference, Object newValue) {
+				String cmd = null;
+				String value = null;
+				if (newValue.toString().equals("true")) {
+					cmd = "echo 1 > "+T2W_FILE;
+					value = "1";
+				} else {
+					cmd = "echo 0 > "+T2W_FILE;
 					value = "0";
 				}
 				CMDProcessor.runSuCommand(cmd);
@@ -523,6 +560,20 @@ public class KernelPreferenceFragment extends PreferenceFragment implements OnPr
 			}
 		}
 
+		if(!new File(T2W_FILE).exists()) {
+			mKernelCategory.removePreference(mTouch2wake);
+			mKernelCategory.removePreference(mT2wDelay);
+		} else {
+			String t2wState = Helpers.getFileContent(new File(T2W_FILE));
+			if(t2wState.equals("1")) {
+				mTouch2wake.setChecked(true);
+				mTouch2wake.setValue("1");
+			}else if(t2wState.equals("0")) {
+				mTouch2wake.setChecked(false);
+				mTouch2wake.setValue("0");
+			}
+		}
+
 		if(!new File(FCHARGE_FILE).exists()) {
 			mKernelCategory.removePreference(mKernelFcharge);
 		} else {
@@ -670,6 +721,34 @@ public class KernelPreferenceFragment extends PreferenceFragment implements OnPr
 			// By hiding the main fragment, transparency isn't an issue
 			ft.addToBackStack("TAG");
 			ft.commit();
+		}
+    if(pref == mT2wDelay) {
+			AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
+			LayoutInflater inflater = getActivity().getLayoutInflater();
+			View v = inflater.inflate(R.layout.dialog_layout, null, false);
+			final EditText et = (EditText) v.findViewById(R.id.et);
+			String val = pref.getSummary().toString();
+			et.setText(val);
+			et.setRawInputType(InputType.TYPE_CLASS_NUMBER);
+			et.setGravity(Gravity.CENTER_HORIZONTAL);
+			List<DataItem> items = db.getAllItems();
+			builder.setView(v);
+			builder.setPositiveButton("ok", new DialogInterface.OnClickListener() {
+
+				@Override
+				public void onClick(DialogInterface dialog, int which) {
+					// TODO Auto-generated method stub
+					String value = et.getText().toString();
+					pref.setSummary(value);
+					CMDProcessor.runSuCommand("echo \""+value+"\" > "+pref.getKey());
+					updateDb(pref, value, ((CustomPreference) pref).isBootChecked());
+				}
+			} );
+			AlertDialog dialog = builder.create();
+			dialog.show();
+			dialog.getWindow().getAttributes().windowAnimations = R.style.dialog_animation;
+			Window window = dialog.getWindow();
+			window.setLayout(800, LayoutParams.WRAP_CONTENT);
 		}
 		if(pref == mVibration) {
 			AlertDialog.Builder builder = new AlertDialog.Builder(mContext);

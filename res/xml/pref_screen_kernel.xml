@@ -58,6 +58,14 @@
             android:key="key_f2s_switch"
             android:summary="If enabled, you will be able to only turn off the screen by swiping on navigation bar"
             android:title="Flick 2 Sleep " />
+         <com.dsht.kerneltweaker.CustomCheckBoxPreference
+            android:key="key_t2w_switch"
+            android:summary="If enabled, you will be able to only turn on the screen if it times out"
+            android:title="Touch 2 Wake " />
+        <com.dsht.kerneltweaker.CustomPreference
+            android:key="key_t2w_delay_switch"
+            android:summary=""
+            android:title="Touch 2 Wake Delay" />
         <com.dsht.kerneltweaker.CustomPreference
             android:key="key_vibration"
             android:summary=""
