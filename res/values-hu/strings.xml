@@ -14,7 +14,7 @@
   <string name="empty">Üres mappa!</string>
   <string name="qqq">qqq</string>
   <string name="set_on_boot">Alkalmazva rendszerindításkor</string>
-  <string name="command">Parancsok listája üres. Érintse meg a plusz gombot, a parancs hozzáadásához</string>
+  <string name="command">Parancsok listája üres. /n Érintse meg a plusz gombot, a parancs hozzáadásához</string>
   <string name="system">Rendszer</string>
   <string name="data">Adat</string>
   <string name="android_secure">Android biztonság</string>
@@ -42,7 +42,7 @@
     <item>--Készülék Info</item>
     <item>CPU Statisztika</item>
     <item>CPU Info</item>
-    <item>Soc Paraméterek</item>
+    <item>--Soc Paraméterek</item>
     <item>CPU Paraméterek</item>
     <item>GPU Paraméterek</item>
     <item>UV Tábla</item>
@@ -50,7 +50,7 @@
     <item>Tweaks</item>
     <item>Low Memory Killer</item>
     <item>Virtuális Gép</item>
-    <item>-- Alkalmazva rendszerindításkor</item>
+    <item>--Alkalmazva rendszerindításkor</item>
     <item>Elemek felülvizsgálata</item>
     <item>--Segédprogramok</item>
     <item>Fájlkezelő</item>

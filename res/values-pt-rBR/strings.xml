@@ -14,7 +14,7 @@
   <string name="empty">Esta pasta está vazia!</string>
   <string name="qqq">qqq</string>
   <string name="set_on_boot">Situado no Boot</string>
-  <string name="command">Lista de comandos está vazio. \ N Toque no botão de adição para adicionar um comando</string>
+  <string name="command">Lista de comandos está vazio. \n Toque no botão de adição para adicionar um comando</string>
   <string name="system">Sistema</string>
   <string name="data">Data</string>
   <string name="android_secure">Segurança do Android</string>
@@ -42,26 +42,25 @@
     <item>--Device Info</item>
     <item>Estatísticas do Cpu</item>
     <item>Informações do Cpu</item>
-    <item>Params SoC...</item>
+    <item>--Params SoC</item>
     <item>Paramentos do Cpu</item>
     <item>Paramentos da Gpu</item>
     <item>UV Table</item>
-    <item>-Kernel Params</item>
+    <item>--Kernel Params</item>
     <item>Modificações</item>
     <item>Assassino de pouca memória</item>
     <item>Máquina Virtual</item>
-    <item>Situado no boot</item>
+    <item>--Situado no boot</item>
     <item>Revisão de Itens</item>
-    <item>Utilitários</item>
+    <item>--Utilitários</item>
     <item>Gerenciador de arquivos</item>
-    <item>
-Backup</item>
+    <item>Backup</item>
     <item>Recuperação de ação</item>
-    <item>-Extra</item>
+    <item>--Extra</item>
     <item>Modificações do build.prop</item>
     <item>Ajustes de init.d</item>
     <item>Desfoque WP</item>
-    <item>-App ajustes/info</item>
+    <item>--App ajustes/info</item>
     <item>Configurações</item>
     <item>Informações</item>
   </string-array>

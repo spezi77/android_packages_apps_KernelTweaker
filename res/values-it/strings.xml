@@ -36,30 +36,31 @@ Version %s<br><br>
 <a href="https://github.com/gabrielemariotti/colorpickercollection">Source</a><br><br>
 <a href="https://plus.google.com/114432517923423045208">By Gabriele Mariotti</a><br><br>
 
-]]></string>
+]]>
+  </string>
   <string-array name="menu_entries">
-    <item>..--Info dispositivo</item>
+    <item>--Info dispositivo</item>
     <item>Statistiche CPU</item>
     <item>Info CPU</item>
-    <item>Parametri SoC</item>
+    <item>--Parametri SoC</item>
     <item>Parametri della CPU</item>
     <item>Parametri della CPU</item>
     <item>Undervolt</item>
-    <item>-Parametri Kernel</item>
+    <item>--Parametri Kernel</item>
     <item>Tweaks</item>
     <item>Low Memory Killer</item>
     <item>Macchina virtuale</item>
-    <item>Imposta all\'avvio</item>
+    <item>--Imposta all\'avvio</item>
     <item>Esaminare gli elementi</item>
-    <item>-Utilità</item>
+    <item>--Utilità</item>
     <item>Gestione file</item>
     <item>Backup</item>
     <item>Azioni di recovery</item>
-    <item>-Extra</item>
+    <item>--Extra</item>
     <item>Mod Build.prop</item>
     <item>Init.d tweaks</item>
     <item>WP Blur</item>
-    <item>-Impostazioni app/info</item>
+    <item>--Impostazioni app/info</item>
     <item>Impostazioni</item>
     <item>Informazioni</item>
   </string-array>

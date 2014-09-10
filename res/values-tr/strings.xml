@@ -36,7 +36,7 @@
         <a href="https://github.com/gabrielemariotti/colorpickercollection">Kaynak</a><br><br>
         <a href="https://plus.google.com/114432517923423045208">By Gabriele Mariotti</a><br><br>
 
-    ]]>
+]]>
     </string>
   <string-array name="menu_entries">
     <item>--Aygıt bilgisi</item>
@@ -52,11 +52,11 @@
     <item>Sanal makine</item>
     <item>--Açılışta ayarla</item>
     <item>Önizleme öğeleri</item>
-    <item>-Altyazılar</item>
+    <item>--Altyazılar</item>
     <item>Dosya Yöneticisi</item>
     <item>Yedekleme</item>
     <item>Kurtarma eylemleri</item>
-    <item>-İlave</item>
+    <item>--İlave</item>
     <item>Build.prop Modları</item>
     <item>Init.d Geliştirmeleri</item>
     <item>WP bulanıklık</item>

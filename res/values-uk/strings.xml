@@ -14,7 +14,7 @@
   <string name="empty">Ця папка  порожня!</string>
   <string name="qqq">qqq</string>
   <string name="set_on_boot">Установити під час завантаження</string>
-  <string name="command">Список команд порожній. Натисніть плюс, щоб додати команду</string>
+  <string name="command">Список команд порожній. /n Натисніть плюс, щоб додати команду</string>
   <string name="system">Система</string>
   <string name="data">Дані</string>
   <string name="android_secure">Безпека Android</string>
@@ -36,7 +36,7 @@
         <a href="https://github.com/gabrielemariotti/colorpickercollection">Source</a><br><br>
         <a href="https://plus.google.com/114432517923423045208">Автор Gabriele Mariotti</a><br><br>
 
-    ]]>
+]]>
     </string>
   <string-array name="menu_entries">
     <item>--Інформація про пристрій</item>
@@ -50,7 +50,7 @@
     <item>Тонкі налаштування</item>
     <item>Оптимізація малого обсягу пам \' яті</item>
     <item>Віртуальна машина</item>
-    <item>-Встановити під час завантаження</item>
+    <item>--Встановити під час завантаження</item>
     <item>Огляд елементів</item>
     <item>--Утиліти</item>
     <item>Файловий менеджер</item>
