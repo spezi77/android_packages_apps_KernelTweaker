@@ -18,12 +18,12 @@
   <string name="system">Rendszer</string>
   <string name="data">Adat</string>
   <string name="android_secure">Android biztonság</string>
-  <string name="boot">Boot</string>
+  <string name="boot">Rendszerbetöltés</string>
   <string name="cache">Gyorsítótár</string>
   <string name="recovery">Recovery</string>
   <string name="backup_name">Biztonsági másolat neve</string>
   <string name="textview">Szöveg megtekintése</string>
-  <string name="presets">JELENLEGI</string>
+  <string name="presets">jELENLEGI</string>
   <string name="reboot">Újraindítás</string>
   <string name="no_backups_found">Nem található biztonsági mentés</string>
   <string name="backups_display">A biztonsági mentések itt jelennek meg</string>
@@ -47,7 +47,7 @@
     <item>GPU Paraméterek</item>
     <item>UV Tábla</item>
     <item>-- Kernel Paraméterek</item>
-    <item>Tweaks</item>
+    <item>Fejlesztések</item>
     <item>Low Memory Killer</item>
     <item>Virtuális Gép</item>
     <item>--Alkalmazva rendszerindításkor</item>
@@ -60,7 +60,7 @@
     <item>Build.prop módosítások</item>
     <item>Init.d trükkök</item>
     <item>Háttérkép homályosság</item>
-    <item>--App Settings/info</item>
+    <item>--App beállítások/info</item>
     <item>Beállítások</item>
     <item>Információ</item>
   </string-array>
@@ -97,7 +97,7 @@
     <item>#ff0099cc</item>
   </string-array>
   <string-array name="flash_dialog">
-    <item>Flash Package</item>
+    <item>Csomag flashelés</item>
   </string-array>
   <string-array name="install_image_dialog">
     <item>Boot.img telepítése</item>
@@ -167,11 +167,11 @@
     <item>Első szint</item>
   </string-array>
   <string-array name="glo_cpu_descs">
-    <item>A maximális frekvencia, amit a CPU fog használni. Növelje a jobb teljesítmény érdekében vagy csökkentse az akkumulátor élettartamának növeléséhez</item>
+    <item>A maximális frekvencia, amit a CPU fog használni. Csökkentse az akkumulátor élettartamának növeléséhez, vagy növelje a teljesítményt</item>
     <item>A minimális frekvencia. amit a CPU használni fog. Növelje a jobb teljesítmény érdekében vagy csökkentse az akkumulátor élettartamának növeléséhez</item>
     <item>This controls the scaling of the CPU frequencies depending on CPU load\n(Click to show governors explanations)</item>
     <item>How many cores goes online when you touch the screen</item>
-    <item>The threshold that controls when a core will be woked up. Higher the value, harder for CPU core to become online</item>
+    <item>A küszöbérték, amely meghatározza, hogy mikor ébredjen fel egy CPU mag. Magasabb értéken, nehezebb vált online állapotra a CPU mag</item>
   </string-array>
   <string-array name="glo_gov_titles">
     <item>Teljesítménycentrikus</item>
@@ -314,7 +314,7 @@ default value of 20 it means that if the CPU usage needs to be below
     <item>This is how often the governor polls for the GPU load. Increase for battery life, decrease for performance. 1000 equals 1 second.</item>
   </string-array>
   <string-array name="glo_uv_titles">
-    <item>UnderVolting</item>
+    <item>Feszültség csökkentés</item>
   </string-array>
   <string-array name="glo_uv_descs">
     <item>UnderVolt table allows you to change the voltage parameter of every frequency. This means that you can set, for every frequency, how much current the CPU 
@@ -506,7 +506,7 @@ causes the kernel to prefer to reclaim dentries and inodes.</item>
   <string name="core">Mag</string>
   <string name="prefcat_free_memory">SZABAD MEMÓRIA</string>
   <string name="prefcat_tweaks">GYORS TÖLTÉS</string>
-  <string name="prefcat_misc_short">MISC</string>
+  <string name="prefcat_misc_short">Egyéb</string>
   <string name="prefcat_read_ahead">SD ELŐREOLVASÁS</string>
   <string name="prefcat_vm_settings">DALVIK BEÁLLÍTÁSOK</string>
   <string name="dt_free_memory">Minfree Taskkiller</string>
@@ -553,7 +553,7 @@ causes the kernel to prefer to reclaim dentries and inodes.</item>
   <string name="blx_title">Töltés korlátozás:</string>
   <string name="dsync_info">Dinamikus FSync funkció\nSzerző Paul Reioux (faux123)</string>
   <string name="prefcat_dsync">DINAMIKUS FSYNC</string>
-  <string name="ps_dsync">Setting will be restored on reboot</string>
+  <string name="ps_dsync">A beállítások visszaállnak újraindításkor</string>
   <string name="pt_dsync">Dinamikus Fsync</string>
   <string name="prefcat_bltimeout">HÁTTÉRVILÁGÍTÁS IDŐKORLÁTJA</string>
   <string name="ps_bltimeout">%s ms</string>
@@ -651,8 +651,8 @@ causes the kernel to prefer to reclaim dentries and inodes.</item>
   <string name="residual_files_title">Fennmaradó fájlok tisztítása</string>
   <string name="btncleanall">Összes tisztítása</string>
   <string name="clean_files_msg">Fennmaradó fájlok %s törlésre kerülnek. Folytatja?</string>
-  <string name="filesstr">file(s)</string>
-  <string name="no_residuals">No residual files</string>
+  <string name="filesstr">fájl(ok)</string>
+  <string name="no_residuals">Nincsenek megmaradt fájlok</string>
   <string name="prefcat_optim_db">DBs optimalizálás</string>
   <string name="optim_db_title">Adatbázisok optimalizálása</string>
   <string name="ps_optim_db">Ez optimalizálja az adatbázisokat SQL VACUUM paranccsal.</string>
@@ -662,7 +662,7 @@ causes the kernel to prefer to reclaim dentries and inodes.</item>
     <item>Contains constantly generated log files</item>
     <item>Contains statistics about what apps you started</item>
     <item>Contains traces from \'application not responding\' events</item>
-    <item>Contains temporary files</item>
+    <item>Ideiglenes fájlokat tartalmaz</item>
   </string-array>
   <string name="prefcat_fix_perms">JOGOSULTSÁGOK JAVÍTÁSA</string>
   <string name="fix_perms_title">Jogosultságok javítása</string>

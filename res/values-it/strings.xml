@@ -56,7 +56,7 @@ Version %s<br><br>
     <item>Gestione file</item>
     <item>Backup</item>
     <item>Azioni di recovery</item>
-    <item>--Extra</item>
+    <item>-Extra</item>
     <item>Mod Build.prop</item>
     <item>Init.d tweaks</item>
     <item>WP Blur</item>
@@ -204,14 +204,8 @@ Version %s<br><br>
     <item>Misurato in percentuale da 1 a 100. Quando il carico della CPU raggiunge questo punto, il governor scalerà in alto la CPU. Valori maggiori significano meno reattività e valori inferiori corrispondono a più reattività al costo di maggior consumo di batteria.</item>
     <item>Il valore predefinito è 0. Impostando un valore più alto, il governor salirà verso gradi di frequenza più bassa. Utilizza questo se vuoi cge la CPU trascorra meno tempo su frequenze più alte. Un\'alternativa migliore sarebbe quella di underclockare a una frequenza più bassa rispetto all\'utilizzo di powersave bias.</item>
     <item>Nella forma più semplice, sampling_down_factor determina quanto la frequenza CPU dovrebbe stare a frequenze più elevate quando occupata.Il comportamento predefinito è quello di passare a frequenze più basse (1). Avendo sampling_down_factor impostato su 1 non fa nessuna modifica dal comportamento esistente (per l\'ondemand non modificato), ma avendo sampling_down_factor impostato su un valore maggiore di 1 lo fa agire come un moltiplicatore per l\'intervallo di pianificazione per rivalutare il carico quando la CPU è alla sua più alta frequenza di clock (che è scaling_max_freq) a causa dell\'alto carico. Questo migliora le prestazioni riducendo l\'overhead di valutazione del carico e aiutando la CPU a raggiungere la sua più alta frequenza di clock della CPU quando è occupata, piuttosto che spostando avanti e indietro in velocità. Questa modifica non ha effetto sul comportamento a carichi più bassi di frequenze/inferiore della CPU.</item>
-    <item>This factor indirectly calculate the down-threshold of Ondemand. 
-            After completing sampling-down-factor*sampling-rate at max frequency because of high load, 
-            governor samples the load again to calculate an estimate of the new target frequency in a 
-            way that the lowest frequency will be chosen that would not trigger up_threshold in the 
-            next sample. Because triggering up-threshold will again cause CPU to scale up to max frequency. 
-            During this choice down_differential is taken into account as a breathing room value. 
-            Target frequency is calculated as max_load_freq / (up_threshold - down_differential). The obtained value might be a non-existent value in the freq_table and CPU driver will round it off to a value in freq_table. max_load_freq is the theoretical frequency at which CPU can handle 100% workload. 
-            It is usually a value below scaling_max_freq.</item>
+    <item>E\' il governor di default in quasi tutti i kernel stock. Uno dei suoi principali obiettivi è, passando rapidamente alla frequenza massima non appena la CPU rileva un attività, quello di garantire una buona reattività del sistema. Il suo funzionamento non prevede una valutazione del carico di lavoro quindi, appena sollecitato, tende a far salire la CPU in modo immediato alla massima frequenza per poi diminuire gradualmente in stato di inattività. Anche se viene considerato un governor equilibrato, non è particolarmente indicato per l\'autonomia nel suo settaggio predefinito.
+Uno dei motivi principali per cui il governor ondemand non è parsimonioso di batteria, è il fatto che, decide il prossimo step di frequenza nell\'istante di richiesta dell\' intervallo di campionamento (detto sampling rate). Nell\'istante di richiesta, può rispondere velocemente al cambiamento di carico di lavoro, senza calcolare la richiesta reale di utilizzo della CPU e quindi provocare frequenti passaggi dalla frequenza min-max e viceversa.</item>
     <item>Ogni volta che viene attivata la logica up-scaling il governor incarica la CPU di aumentare la sua frequenza di freq_step percentuale della frequenza max consentita.</item>
   </string-array>
   <string-array name="glo_interactive_titles">
@@ -331,7 +325,7 @@ default value of 20 it means that if the CPU usage needs to be below
     <item>Aumentare o diminuire il guadagno degli auricolari. Valori da -20 a 20</item>
     <item>Aumentare o diminuire il guadagno del microfono. Valori da -20 a 20</item>
     <item>Aumentare o diminuire il guadagno del diffusore. Valori da -20 a 20</item>
-    <item>Increase or decrease volume gain. Values from -20 to 20</item>
+    <item>Aumentare o diminuire il volume</item>
   </string-array>
   <string-array name="glo_sched_titles">
     <item>Noop</item>
@@ -407,7 +401,7 @@ default value of 20 it means that if the CPU usage needs to be below
   <string name="current_max">Velocità massima: </string>
   <string name="current_min">Velocità minima: </string>
   <string name="governor">Governor</string>
-  <string name="io">I/O Scheduler</string>
+  <string name="io">Schedulatore I/O</string>
   <string name="sob">Applicare automaticamente all\'avvio</string>
   <string name="ok">Ok</string>
   <string name="cancel">Annulla</string>
@@ -422,11 +416,11 @@ default value of 20 it means that if the CPU usage needs to be below
   <string name="prefcat_read_ahead">SD READ AHEAD</string>
   <string name="prefcat_vm_settings">Impostazioni dalvik</string>
   <string name="dt_free_memory">Minfree Taskkiller</string>
-  <string name="dt_read_ahead">SD Read Ahead</string>
+  <string name="dt_read_ahead">Velocità lettura SD</string>
   <string name="pt_free_memory">Memoria libera</string>
   <string name="ps_free_memory">Quantità di RAM che manterrà il minfree taskkiller |         Corrente: %s</string>
   <string name="ps_free_memory_boot">Applicare la quantità sopra all\'avvio</string>
-  <string name="pt_read_ahead">Storage read ahead</string>
+  <string name="pt_read_ahead">Velocità Lettura memoria interna</string>
   <string name="ps_read_ahead">Quantità di leggere sulla memoria, in kb |         Corrente: %s</string>
   <string name="ps_fast_charge_boot">Carica rapida</string>
   <string name="fast_charge_warning">NON sarai  in grado di collegarti al tuo PC dopo ogni riavvio! \n\nMentre Carica rapida è impostata su ON, è possibile * solo * ricaricare il telefono!</string>
@@ -549,7 +543,7 @@ default value of 20 it means that if the CPU usage needs to be below
   <string name="sh_title">Edit shell command</string>
   <string name="ps_sh">Command will be executed at boot.</string>
   <string name="sh_msg">Leave blank for no operation.</string>
-  <string name="clear">Clear</string>
+  <string name="clear">Limpido</string>
   <string name="yes">Sì</string>
   <string name="wait">Please wait&#8230;</string>
   <string name="prefcat_wipe_cache">CACHE and DALVIK CACHE</string>

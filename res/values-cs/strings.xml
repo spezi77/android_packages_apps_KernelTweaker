@@ -31,10 +31,10 @@
   <string name="about_ok">OK</string>
   <string name="about_body">
 <![CDATA[
-        <b>Colorpickercollection Library & Demo</b><br>
-        Version %s<br><br>
-        <a href="https://github.com/gabrielemariotti/colorpickercollection">Source</a><br><br>
-        <a href="https://plus.google.com/114432517923423045208">By Gabriele Mariotti</a><br><br>
+        <b>Knihovna Colorpickercollection & Demo</b><br>
+        Verze %s<br><br>
+        <a href="https://github.com/gabrielemariotti/colorpickercollection">Zdroj</a><br><br>
+        <a href="https://plus.google.com/114432517923423045208">Od Gabriele Mariotti</a><br><br>
 
     ]]>
     </string>
@@ -525,17 +525,17 @@ způsobí, že jádro upřednostní vracení propojení a vnitřních objektů.<
   <string name="pt_dynamic_write_back">Zpětný zápis dynamických \"špinavých\" stránek paměti</string>
   <string name="dynamic_writeback_active_title">Zpětný zápis \"špinavých\" aktivních stránek paměti v centisekundách</string>
   <string name="dynamic_writeback_suspend_title">Zpětný zápis \"špinavých\" odložených stránek paměti v centisekundách</string>
-  <string name="size_25_mb">25mb</string>
-  <string name="size_50_mb">50mb</string>
-  <string name="size_75_mb">75mb</string>
-  <string name="size_80_mb">80mb</string>
-  <string name="size_100_mb">100mb</string>
-  <string name="size_128_kb">128kb</string>
-  <string name="size_256_kb">256kb</string>
-  <string name="size_512_kb">512kb</string>
-  <string name="size_1024_kb">1024kb</string>
-  <string name="size_2048_kb">2048kb</string>
-  <string name="size_4096_kb">4096kb</string>
+  <string name="size_25_mb">25MB</string>
+  <string name="size_50_mb">50MB</string>
+  <string name="size_75_mb">75MB</string>
+  <string name="size_80_mb">80MB</string>
+  <string name="size_100_mb">100MB</string>
+  <string name="size_128_kb">128kB</string>
+  <string name="size_256_kb">256kB</string>
+  <string name="size_512_kb">512kB</string>
+  <string name="size_1024_kb">1024kB</string>
+  <string name="size_2048_kb">2048kB</string>
+  <string name="size_4096_kb">4096kB</string>
   <string name="volt_info">POZOR!\nPřed aktivací volby \"Nastavit při spuštění\" se ujistěte, že zadané hodnoty nepřesahují limity nebo riskujete zamrznutí telefonu.</string>
   <string name="ps_volt_mhz_voltage">" Hz"</string>
   <string name="ps_volt_save">"Uložit"</string>
@@ -585,7 +585,7 @@ způsobí, že jádro upřednostní vracení propojení a vnitřních objektů.<
   <string name="sh_title">Upravit příkaz rozhraní</string>
   <string name="ps_sh">Příkaz bude proveden při spouštění.</string>
   <string name="sh_msg">Ponechte prázdné pro žádné operace.</string>
-  <string name="clear">Vyčistit</string>
+  <string name="clear">Jasno</string>
   <string name="yes">Ano</string>
   <string name="wait">Počkejte prosím...</string>
   <string name="prefcat_wipe_cache">MEZIPAMĚŤ a MEZIPAMĚŤ DALVIK</string>
@@ -822,7 +822,7 @@ způsobí, že jádro upřednostní vracení propojení a vnitřních objektů.<
     <item>500</item>
   </string-array>
   <string-array name="entries_prox_delay">
-    <item>disable</item>
+    <item>zakázat</item>
     <item>0</item>
     <item>50</item>
     <item>75</item>
@@ -852,7 +852,7 @@ způsobí, že jádro upřednostní vracení propojení a vnitřních objektů.<
     <item>Čekat na přerušení</item>
   </string-array>
   <string-array name="entries_sleep">
-    <item>disable</item>
+    <item>zakázat</item>
     <item>0</item>
     <item>1</item>
     <item>2</item>

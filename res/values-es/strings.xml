@@ -4,7 +4,7 @@
   <string name="app_name">Núcleo Tweaker</string>
   <string name="action_settings">Ajustes</string>
   <string name="hello_world">¡Hola Mundo!</string>
-  <string name="blur_radius">Radio de borrosidad</string>
+  <string name="blur_radius">Radio de desenfoque</string>
   <string name="apply">Aplicar</string>
   <string name="title">Título</string>
   <string name="summary">Sumario</string>
@@ -14,7 +14,7 @@
   <string name="empty">Esta carpeta está vacía!</string>
   <string name="qqq">QQQ</string>
   <string name="set_on_boot">Situado en el arranque</string>
-  <string name="command">Comandos de lista está vacía. \n Pulse el botón (+) para añadir un comando</string>
+  <string name="command">La lista de comandos está vacía.\n Pulse el botón + para añadir un comando</string>
   <string name="system">Sistema</string>
   <string name="data">Datos</string>
   <string name="android_secure">Android secure</string>
@@ -51,7 +51,7 @@
     <item>Asesino de poca memoria</item>
     <item>Máquina virtual</item>
     <item>--Sistema de arranque</item>
-    <item>Ítemes</item>
+    <item>Revisar elementos</item>
     <item>--Utilidades</item>
     <item>File Manager</item>
     <item>Copia de seguridad</item>
@@ -766,7 +766,7 @@ Si expira el tiempo ACK fuera, comienzo lento se utiliza, ya que es con Tahoe.</
     <item>500</item>
   </string-array>
   <string-array name="entries_prox_delay">
-    <item>disable</item>
+    <item>desabilitado</item>
     <item>0</item>
     <item>50</item>
     <item>75</item>
@@ -796,7 +796,7 @@ Si expira el tiempo ACK fuera, comienzo lento se utiliza, ya que es con Tahoe.</
     <item>Espera para interrumpir</item>
   </string-array>
   <string-array name="entries_sleep">
-    <item>disable</item>
+    <item>desabilitado</item>
     <item>0</item>
     <item>1</item>
     <item>2</item>

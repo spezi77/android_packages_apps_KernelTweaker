@@ -556,7 +556,7 @@ TCP Westwood relies on mining the ACK stream for information to help it better s
   <string name="flash_info">va être flashé sur la partition\n%s\n en tant que</string>
   <string name="dir_parent">&lt; parent DIR &gt;</string>
   <string name="dir">&lt; DIR &gt;</string>
-  <string name="bkexit">Appuyez une seconde fois pour quitter</string>
+  <string name="bkexit">Appuyer encore pour quitter</string>
   <string name="prefcat_residual_files">NETTOYER LES FICHIERS RÉSIDUELS</string>
   <string name="residual_files_title">Nettoyer les fichiers résiduels</string>
   <string name="btncleanall">Tout nettoyer</string>

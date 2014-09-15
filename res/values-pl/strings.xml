@@ -526,7 +526,7 @@ Dynamic Dirty Page Writebacks feature\nAuthor Cristoforo Cataldo (Christopher83)
   <string name="sh_title">Edytowanie polecenia powłoki</string>
   <string name="ps_sh">Polecenie będzie wykonywane przy starcie systemu.</string>
   <string name="sh_msg">Pozostaw puste dla braku operacji.</string>
-  <string name="clear">Czyść</string>
+  <string name="clear">Przejrzyście</string>
   <string name="yes">Zatwierdź</string>
   <string name="wait">Czekaj...</string>
   <string name="prefcat_wipe_cache">CACHE and DALVIK CACHE</string>

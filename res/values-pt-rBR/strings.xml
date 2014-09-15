@@ -46,7 +46,7 @@
     <item>Paramentos do Cpu</item>
     <item>Paramentos da Gpu</item>
     <item>UV Table</item>
-    <item>--Kernel Params</item>
+    <item>-Kernel Params</item>
     <item>Modificações</item>
     <item>Assassino de pouca memória</item>
     <item>Máquina Virtual</item>
@@ -54,9 +54,10 @@
     <item>Revisão de Itens</item>
     <item>--Utilitários</item>
     <item>Gerenciador de arquivos</item>
-    <item>Backup</item>
+    <item>
+Backup</item>
     <item>Recuperação de ação</item>
-    <item>--Extra</item>
+    <item>-Extra</item>
     <item>Modificações do build.prop</item>
     <item>Ajustes de init.d</item>
     <item>Desfoque WP</item>
@@ -759,7 +760,7 @@ faz com que o kernel para preferem recuperar dentries e inodes.</item>
     <item>500</item>
   </string-array>
   <string-array name="entries_prox_delay">
-    <item>disable</item>
+    <item>desativar</item>
     <item>0</item>
     <item>50</item>
     <item>75</item>
@@ -789,7 +790,7 @@ faz com que o kernel para preferem recuperar dentries e inodes.</item>
     <item>Esperar por interrupção</item>
   </string-array>
   <string-array name="entries_sleep">
-    <item>disable</item>
+    <item>desativar</item>
     <item>0</item>
     <item>1</item>
     <item>2</item>

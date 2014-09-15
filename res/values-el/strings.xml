@@ -512,7 +512,7 @@
   <string name="sh_title">Επεξεργασία εντολής κελύφους</string>
   <string name="ps_sh">Εντολή θα εκτελεστεί κατά την εκκίνηση.</string>
   <string name="sh_msg">Αφήστε κενό για καμία λειτουργία.</string>
-  <string name="clear">Εκκαθάριση όλων</string>
+  <string name="clear">Εκκαθάριση</string>
   <string name="yes">Ναι</string>
   <string name="wait">Παρακαλώ περιμένετε &#8230;</string>
   <string name="prefcat_wipe_cache">CACHE και DALVIK CACHE</string>

@@ -844,7 +844,7 @@ causes the kernel to prefer to reclaim dentries and inodes.</item>
 	<string name="pref_lcd_alt_summary">Screen density: %s</string>
     
     <!-- Init.d -->
-    <string name="header_summary_init_d">@null</string>
+    <string name="header_summary_init_d" translatable="false">@null</string>
     <string name="init_d_title">Init.d Tweaks</string>
     <string name="pt_general">General</string>
     <string name="pt_zipalign_apks">Zipalign apps</string>
