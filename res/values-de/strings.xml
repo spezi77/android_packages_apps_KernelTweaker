@@ -29,15 +29,6 @@
   <string name="backups_display">Die Sicherungen, die Sie erstellen werden hier angezeigt</string>
   <string name="title_about">Über uns</string>
   <string name="about_ok">OK</string>
-  <string name="about_body">
-<![CDATA[
-        <b>Colorpickercollection Library & Demo</b><br>
-        Version %s<br><br>
-        <a href="https://github.com/gabrielemariotti/colorpickercollection">Source</a><br><br>
-        <a href="https://plus.google.com/114432517923423045208">By Gabriele Mariotti</a><br><br>
-
-    ]]>
-    </string>
   <string-array name="menu_entries">
     <item>--Geräte Informationen</item>
     <item>CPU-Statistik</item>
@@ -787,7 +778,6 @@ causes the kernel to prefer to reclaim dentries and inodes.</item>
   <string name="pref_lcd_summary">Set your desired LCD density</string>
   <string name="pref_lcd_default">480</string>
   <string name="pref_lcd_alt_summary">LCD-Auflösung: %s</string>
-  <string name="header_summary_init_d">@null</string>
   <string name="init_d_title">Init.d Verbesserungen</string>
   <string name="pt_general">Allgemein</string>
   <string name="pt_zipalign_apks">Zipalign Apps</string>

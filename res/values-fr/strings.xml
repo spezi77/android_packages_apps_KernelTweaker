@@ -29,15 +29,6 @@
   <string name="backups_display">Les sauvegardes que vous ferez seront affichées ici</string>
   <string name="title_about">À propos</string>
   <string name="about_ok">OK</string>
-  <string name="about_body">
-<![CDATA[
-        <b>Colorpickercollection Library & Demo</b><br>
-        Version %s<br><br>
-        <a href="https://github.com/gabrielemariotti/colorpickercollection">Source</a><br><br>
-        <a href="https://plus.google.com/114432517923423045208">By Gabriele Mariotti</a><br><br>
-
-    ]]>
-    </string>
   <string-array name="menu_entries">
     <item>--Infos Appareil</item>
     <item>Stats Cpu</item>
@@ -686,7 +677,6 @@ TCP Westwood relies on mining the ACK stream for information to help it better s
   <string name="pref_lcd_summary">Définissez votre densité LCD</string>
   <string name="pref_lcd_default">480</string>
   <string name="pref_lcd_alt_summary">Densité de l\'écran : %s</string>
-  <string name="header_summary_init_d">@null</string>
   <string name="init_d_title">Améliorations de Init.d</string>
   <string name="pt_general">Général</string>
   <string name="pt_zipalign_apks">Applications Zipalignées</string>

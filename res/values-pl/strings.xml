@@ -29,15 +29,6 @@
   <string name="backups_display">Twoje kopie zapasowe będą wyświetlane tutaj</string>
   <string name="title_about">Informacje</string>
   <string name="about_ok">Ok</string>
-  <string name="about_body">
-<![CDATA[
-        <b>Biblioteka Colorpickercollection & Demo</b><br>
-        Wersja %s<br><br>
-        <a href="https://github.com/gabrielemariotti/colorpickercollection">Źródło</a><br><br>
-        <a href="https://plus.google.com/114432517923423045208">od Gabriele Mariotti</a><br><br>
-
-    ]]>
-    </string>
   <string-array name="menu_entries">
     <item>--Informacje o urządeniu</item>
     <item>Statystyki CPU</item>
@@ -673,7 +664,6 @@ Dynamic Dirty Page Writebacks feature\nAuthor Cristoforo Cataldo (Christopher83)
   <string name="pref_lcd_summary">Ustawia żądaną ilość pikseli na cal, dpi, dla wyświetlacza LCD</string>
   <string name="pref_lcd_default">480</string>
   <string name="pref_lcd_alt_summary">Gęstość pikseli: %s</string>
-  <string name="header_summary_init_d">@null</string>
   <string name="init_d_title">Tweaki init.d</string>
   <string name="pt_general">Ogólne</string>
   <string name="pt_zipalign_apks">Aplikacje Zipalign</string>

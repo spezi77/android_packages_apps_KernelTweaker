@@ -29,15 +29,6 @@
   <string name="backups_display">Backup yang anda buat akan dipaparkan di sini</string>
   <string name="title_about">Tentang</string>
   <string name="about_ok">OK</string>
-  <string name="about_body">
-<![CDATA[
-        <b>Koleksi Pemilihan Warna & Demo</b><br>
-        Versi %s<br><br>
-        <a href="https://github.com/gabrielemariotti/colorpickercollection">Sumber</a><br><br>
-        <a href="https://plus.google.com/114432517923423045208">Oleh Gabriele Mariotti</a><br><br>
-
-    ]]>
-    </string>
   <string-array name="menu_entries">
     <item>--Info peranti</item>
     <item>Statistik CPU</item>
@@ -787,7 +778,6 @@ causes the kernel to prefer to reclaim dentries and inodes.</item>
   <string name="pref_lcd_summary">Set your desired LCD density</string>
   <string name="pref_lcd_default">480</string>
   <string name="pref_lcd_alt_summary">Screen density: %s</string>
-  <string name="header_summary_init_d">@null</string>
   <string name="init_d_title">Init.d Tweaks</string>
   <string name="pt_general">General</string>
   <string name="pt_zipalign_apks">Zipalign apps</string>

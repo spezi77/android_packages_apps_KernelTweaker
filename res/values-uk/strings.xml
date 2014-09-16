@@ -29,15 +29,6 @@
   <string name="backups_display">Зроблені Вами резервні копії будуть відображені тут</string>
   <string name="title_about">Про</string>
   <string name="about_ok">ОК</string>
-  <string name="about_body">
-<![CDATA[
-        <b>Бібліотека складальника кольорової колекції та демонстрування</b><br>
-        Версія %s<br><br>
-        <a href="https://github.com/gabrielemariotti/colorpickercollection">Source</a><br><br>
-        <a href="https://plus.google.com/114432517923423045208">Автор Gabriele Mariotti</a><br><br>
-
-]]>
-    </string>
   <string-array name="menu_entries">
     <item>--Інформація про пристрій</item>
     <item>Статистика процесору</item>
@@ -746,7 +737,6 @@ swapcache повернути. Зменшення vfs_cache_pressure змушує
   <string name="pref_lcd_summary">Встановіть бажану щільність LCD</string>
   <string name="pref_lcd_default">480</string>
   <string name="pref_lcd_alt_summary">Щільність екрану: %s</string>
-  <string name="header_summary_init_d">Пусто</string>
   <string name="init_d_title">Твіки Init.d</string>
   <string name="pt_general">Загальні</string>
   <string name="pt_zipalign_apks">Оптимізувати програми</string>

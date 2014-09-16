@@ -33,7 +33,7 @@
     <!-- About -->
     <string name="title_about">About</string>
     <string name="about_ok">OK</string>
-    <string name="about_body">
+    <string name="about_body" translatable="false">
 <![CDATA[
         <b>Colorpickercollection Library & Demo</b><br>
         Version %s<br><br>

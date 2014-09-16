@@ -29,15 +29,6 @@
   <string name="backups_display">הגיבויים שתבצע יוצגו כאן</string>
   <string name="title_about">אודות</string>
   <string name="about_ok">אוקיי</string>
-  <string name="about_body">
-<![CDATA[
-        <b>Colorpickercollection Library & Demo</b><br>
-        גירסה %s<br><br>
-        <a href="https://github.com/gabrielemariotti/colorpickercollection"> מקור</a><br><br>
-        <a href="https://plus.google.com/114432517923423045208">By Gabriele Mariotti</a><br><br>
-
-    ]]>
-    </string>
   <string-array name="menu_entries">
     <item>..--פרטי המכשיר</item>
     <item>נתוני מעבד</item>
@@ -780,7 +771,6 @@ causes the kernel to prefer to reclaim dentries and inodes.</item>
   <string name="pref_lcd_summary">Set your desired LCD density</string>
   <string name="pref_lcd_default">480</string>
   <string name="pref_lcd_alt_summary">Screen density: %s</string>
-  <string name="header_summary_init_d">@null</string>
   <string name="init_d_title">Init.d Tweaks</string>
   <string name="pt_general">כללי</string>
   <string name="pt_zipalign_apks">Zipalign apps</string>

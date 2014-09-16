@@ -29,15 +29,6 @@
   <string name="backups_display">Os backups que você fizer vai ser exibido aqui</string>
   <string name="title_about">Sobre</string>
   <string name="about_ok">OK</string>
-  <string name="about_body">
-<![CDATA[
-        <b>Colorpickercollection Library & Demo</b><br>
-        Versão %s<br><br>
-        <a href="https://github.com/gabrielemariotti/colorpickercollection">Fonte</a><br><br>
-        <a href="https://plus.google.com/114432517923423045208">por Gabriele Mariotti</a><br><br>
-
-    ]]>
-    </string>
   <string-array name="menu_entries">
     <item>--Device Info</item>
     <item>Estatísticas do Cpu</item>
@@ -670,7 +661,6 @@ faz com que o kernel para preferem recuperar dentries e inodes.</item>
   <string name="pref_lcd_summary">Definir sua densidade desejada do LCD</string>
   <string name="pref_lcd_default">480</string>
   <string name="pref_lcd_alt_summary">Densidade de tela: %s</string>
-  <string name="header_summary_init_d">@null</string>
   <string name="init_d_title">Ajustes de init.d</string>
   <string name="pt_general">Geral</string>
   <string name="pt_zipalign_apks">Apps Zipalign</string>

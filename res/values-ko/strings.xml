@@ -29,15 +29,6 @@
   <string name="backups_display">만든 백업은 여기에 표시 됩니다</string>
   <string name="title_about">정보</string>
   <string name="about_ok">예</string>
-  <string name="about_body">
-<![CDATA[
-        <b>색 지정 모음 라이브러리 & 데모</b><br>
-        버전 %s<br><br>
-        <a href="https://github.com/gabrielemariotti/colorpickercollection">소스</a><br><br>
-        <a href="https://plus.google.com/114432517923423045208">By Gabriele Mariotti</a><br><br>
-
-    ]]>
-    </string>
   <string-array name="menu_entries">
     <item>--기기 정보</item>
     <item>Cpu 상태</item>
@@ -787,7 +778,6 @@ causes the kernel to prefer to reclaim dentries and inodes.</item>
   <string name="pref_lcd_summary">Set your desired LCD density</string>
   <string name="pref_lcd_default">480</string>
   <string name="pref_lcd_alt_summary">Screen density: %s</string>
-  <string name="header_summary_init_d">@null</string>
   <string name="init_d_title">Init.d Tweaks</string>
   <string name="pt_general">일반</string>
   <string name="pt_zipalign_apks">Zipalign apps</string>
