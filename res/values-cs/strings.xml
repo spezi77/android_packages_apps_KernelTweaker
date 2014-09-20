@@ -27,7 +27,7 @@
   <string name="reboot">Restartovat</string>
   <string name="no_backups_found">Nenalezeny žádné zálohy</string>
   <string name="backups_display">Zálohy, které provedete, se zobrazí zde</string>
-  <string name="title_about">O LiquidSmooth</string>
+  <string name="title_about">O aplikaci</string>
   <string name="about_ok">OK</string>
   <string-array name="menu_entries">
     <item>--Informace o zařízení</item>

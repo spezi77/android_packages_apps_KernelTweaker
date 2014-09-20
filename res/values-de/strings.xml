@@ -299,7 +299,7 @@ default value of 20 it means that if the CPU usage needs to be below
     <item>sample_time_ms</item>
   </string-array>
   <string-array name="glo_gpu_descs">
-    <item>The maximum clock that the GPU can use. Reduce this frequency for better battery life at cost of performance</item>
+    <item>Die maximale Taktfrequenz die die GPU benutzen kann. Reduziere sie für bessere Batterie-Laufzeit auf Kosten der Leistung</item>
     <item>When the GPU load is equal or above this value the GPU governor will increase the frequency</item>
     <item>When the GPU load is equal or above this value the GPU governor will decrease the frequency</item>
     <item>This is how often the governor polls for the GPU load. Increase for battery life, decrease for performance. 1000 equals 1 second.</item>
