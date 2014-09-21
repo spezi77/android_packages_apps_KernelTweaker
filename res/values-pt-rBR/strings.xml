@@ -37,7 +37,7 @@
     <item>Paramentos do Cpu</item>
     <item>Paramentos da Gpu</item>
     <item>UV Table</item>
-    <item>-Kernel Params</item>
+    <item>--Kernel Params</item>
     <item>Modificações</item>
     <item>Assassino de pouca memória</item>
     <item>Máquina Virtual</item>
@@ -45,10 +45,9 @@
     <item>Revisão de Itens</item>
     <item>--Utilitários</item>
     <item>Gerenciador de arquivos</item>
-    <item>
-Backup</item>
+    <item>Backup</item>
     <item>Recuperação de ação</item>
-    <item>-Extra</item>
+    <item>--Extra</item>
     <item>Modificações do build.prop</item>
     <item>Ajustes de init.d</item>
     <item>Desfoque WP</item>
@@ -101,7 +100,7 @@ Backup</item>
   <string name="bk_recovery_desc">Faça um backup do Recovery.img atual no armazenamento externo</string>
   <string name="bk_comp">Usar compressão</string>
   <string name="bk_md5">Criação de Skip MD5</string>
-  <string name="list_command_empty">Lista de comandos está vazio. \ N Toque no botão de adição para adicionar um comando</string>
+  <string name="list_command_empty">Lista de comandos está vazio. \n Toque no botão de adição para adicionar um comando</string>
   <string name="emp_title">VAZIO</string>
   <string name="emp_desc">Não há valores definidos durante o boot</string>
   <string name="rc_title">Root não encontrado</string>
