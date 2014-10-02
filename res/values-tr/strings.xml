@@ -822,7 +822,7 @@ causes the kernel to prefer to reclaim dentries and inodes.</item>
     <item>500</item>
   </string-array>
   <string-array name="entries_prox_delay">
-    <item>disable</item>
+    <item>devre dışı</item>
     <item>0</item>
     <item>50</item>
     <item>75</item>
@@ -852,7 +852,7 @@ causes the kernel to prefer to reclaim dentries and inodes.</item>
     <item>Kesme için bekleyin</item>
   </string-array>
   <string-array name="entries_sleep">
-    <item>disable</item>
+    <item>devre dışı</item>
     <item>0</item>
     <item>1</item>
     <item>2</item>

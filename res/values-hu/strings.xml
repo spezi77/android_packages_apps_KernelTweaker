@@ -139,7 +139,7 @@
   <string name="cpu_governor">Governor</string>
   <string name="cpu_hotplug">Hotplug</string>
   <string name="cpu_cpuquiet_title">Cpuquiet Governor</string>
-  <string name="cpu_cpuquiet_desc">This governor controls which of the CPU cores are available and when.</string>
+  <string name="cpu_cpuquiet_desc">Ez a Governor szabályozza, hogy melyik CPU mag álljon rendelkezésre és mikor.</string>
   <string name="cpu_advanced">Haladó beállítások</string>
   <string name="cpu_adv_gov_title">Governor hangolás</string>
   <string name="cpu_adv_gov_desc">Governorok finomhangolási paraméterei</string>
@@ -617,10 +617,10 @@ causes the kernel to prefer to reclaim dentries and inodes.</item>
   <string name="ps_optim_db">Ez optimalizálja az adatbázisokat SQL VACUUM paranccsal.</string>
   <string-array name="residual_info">
     <item>Contains Android system log files</item>
-    <item>Contains log files from crashed apps</item>
+    <item>Naplófájlokat tartalmaz az összeomlott alkalmazásokról</item>
     <item>Contains constantly generated log files</item>
-    <item>Contains statistics about what apps you started</item>
-    <item>Contains traces from \'application not responding\' events</item>
+    <item>Statisztikákat tartalmaz az elindított alkalmazásokról</item>
+    <item>\"A program nem válaszol\" eseményeket tartalmaz</item>
     <item>Ideiglenes fájlokat tartalmaz</item>
   </string-array>
   <string name="prefcat_fix_perms">JOGOSULTSÁGOK JAVÍTÁSA</string>
