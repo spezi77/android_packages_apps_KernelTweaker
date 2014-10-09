@@ -647,7 +647,7 @@ causes the kernel to prefer to reclaim dentries and inodes.</item>
   <string name="residual_files_title">Clean residual files</string>
   <string name="btncleanall">Clean all</string>
   <string name="clean_files_msg">Residual files from %s will be deleted. Continue?</string>
-  <string name="filesstr">file(s)</string>
+  <string name="filesstr">Datei(en)</string>
   <string name="no_residuals">No residual files</string>
   <string name="prefcat_optim_db">OPTIMIERE DBs</string>
   <string name="optim_db_title">Optimiere Datenbanken</string>

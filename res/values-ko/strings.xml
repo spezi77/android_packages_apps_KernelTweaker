@@ -69,7 +69,7 @@
     <item>현재의 커널/복구모드 백업</item>
     <item>복구모드 실행</item>
     <item>앱 설정</item>
-    <item>Informations and credits</item>
+    <item>제작자 및 정보</item>
   </string-array>
   <string-array name="menu_colors">
     <item>#ff0099cc</item>
@@ -88,27 +88,27 @@
     <item>#ff0099cc</item>
   </string-array>
   <string-array name="flash_dialog">
-    <item>Flash Package</item>
+    <item>패키지 플래시</item>
   </string-array>
   <string-array name="install_image_dialog">
-    <item>Install Boot.img</item>
-    <item>Install Recovery.img</item>
+    <item>Boot.img 설치</item>
+    <item>Recovery.img 설치</item>
   </string-array>
-  <string name="bk_recovery">Backup Recovery.img</string>
-  <string name="bk_boot">Backup Boot.img</string>
-  <string name="bk_boot_desc">Make a backup of current Boot.img on external storage</string>
-  <string name="bk_recovery_desc">Make a backup of current Recovery.img on external storage</string>
-  <string name="bk_comp">Use Compression</string>
-  <string name="bk_md5">Skip MD5 creation</string>
-  <string name="list_command_empty">명령 목록이 비어 있습니다.\n + 버튼을 눌러서 명령어를 추가</string>
+  <string name="bk_recovery">Recovery.img 백업</string>
+  <string name="bk_boot">Boot.img 백업</string>
+  <string name="bk_boot_desc">현재 Boot.img의 백업을 외부 저장소에 저장</string>
+  <string name="bk_recovery_desc">현재 Recovery.img의 백업을 외부 저장소에 저장</string>
+  <string name="bk_comp">압축 사용</string>
+  <string name="bk_md5">MD5 생성 건너뛰기</string>
+  <string name="list_command_empty">명령 목록이 비어 있습니다.\n + 버튼을 눌러서 명령어를 추가하세요.</string>
   <string name="emp_title">EMPTY</string>
-  <string name="emp_desc">No Values set at boot</string>
-  <string name="rc_title">Root not found</string>
-  <string name="rc_desc">Seems your device doesn\'t have root privileges! Please install SuperSU before use this app</string>
-  <string name="bb_title">BusyBox not found</string>
-  <string name="bb_desc">Your device doesn\'t have BusyBox installed, please install it through PlayStore or XDA before use this app</string>
-  <string name="st_cat">Kernel Tweaker settings</string>
-  <string name="gift">Just a gift ;)</string>
+  <string name="emp_desc">부트 시에 아무 값도 정해져 있지 않음</string>
+  <string name="rc_title">루트가 존재하지 않음</string>
+  <string name="rc_desc">당신의 기기는 루트 권한이 없는 거 같습니다! SuperSU를 설치 한 후 이용해주세요.</string>
+  <string name="bb_title">비지박스가 존재하지 않음</string>
+  <string name="bb_desc">당신의 기기는 비지박스가 설치되어있지 않습니다, Play 스토어나 XDA를 통해 설치 후 이용해주세요.</string>
+  <string name="st_cat">커널 트윅커 설정</string>
+  <string name="gift">선물이에요 ;)</string>
   <string-array name="lmk_titles">
     <item>FOREGROUND_APP</item>
     <item>VISIBLE_APP</item>
@@ -118,11 +118,11 @@
     <item>EMPTY_APP</item>
   </string-array>
   <string-array name="lmk_descs">
-    <item>The application currently on the screen and running</item>
-    <item>The application that is open and running in background</item>
-    <item>This is a service an application needs that is alive and ready</item>
-    <item>An idle process that wakes up on application request</item>
-    <item>Apps that provide data (content) to the system, like Facebook sync</item>
+    <item>현재 앱은 화면에 있고 실행 중입니다</item>
+    <item>앱은 열려있으나 백그라운드에 있습니다</item>
+    <item>서비스 앱이고 살아있으며 준비 중입니다</item>
+    <item>안 쓰이는 프로세스이지만 앱의 요청에 일어납니다</item>
+    <item>데이터 (콘텐츠) 를 시스템에 전달해주는 앱입니다, 예를 들어 페이스북 동기화</item>
     <item>사용자에 의해 앱이 닫혔지만 실행될 준비가 되었습니다</item>
   </string-array>
   <string name="vdd_pref">UV VDD 테이블</string>
@@ -140,12 +140,12 @@
   <string name="cpu_hotplug">핫플러그</string>
   <string name="cpu_cpuquiet_title">Cpuquiet 가버너</string>
   <string name="cpu_cpuquiet_desc">This governor controls which of the CPU cores are available and when.</string>
-  <string name="cpu_advanced">Advanced Options</string>
-  <string name="cpu_adv_gov_title">Governor Tuning</string>
+  <string name="cpu_advanced">고급 설정</string>
+  <string name="cpu_adv_gov_title">가버너 튜닝</string>
   <string name="cpu_adv_gov_desc">Fine tune governor parameters</string>
   <string name="cpu_adv_quiet_title">Cpuquiet Governor Tuning</string>
   <string name="cpu_adv_quiet_desc">Fine tune cpuquiet governor parameters</string>
-  <string name="gov_title">Tweakable Governor Values</string>
+  <string name="gov_title">트윅 가능한 가버너 값</string>
   <string name="gpu_category">GPU parameters</string>
   <string name="gpu_freq_title">GPU Max Frequency</string>
   <string name="gpu_freq_desc">Set GPU maximum frequency</string>

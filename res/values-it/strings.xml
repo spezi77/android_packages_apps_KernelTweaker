@@ -269,7 +269,7 @@ default value of 20 it means that if the CPU usage needs to be below
             until you find your ideal spot. Hit the \"Set on boot\" option ONLY after some tests or your device will freeze/crash on next reboot!</item>
   </string-array>
   <string-array name="glo_kernel_titles">
-    <item>I/O Scheduler</item>
+    <item>Pianificatore I/O</item>
     <item>Read ahead size</item>
     <item>Controllo di congestione TCP</item>
     <item>Fsync</item>
@@ -332,7 +332,7 @@ default value of 20 it means that if the CPU usage needs to be below
     <item>Completely Fair Queuing scheduler maintains a scalable per-process I/O queue and attempts to distribute the available I/O bandwidth equally among all I/O requests. Each per-process queue contains synchronous requests from processes. Time slice allocated for each queue depends on the priority of the parent process. V2 of CFQ has some fixes which solves process\' i/o starvation and some small backward seeks in the hope of improving responsiveness.</item>
     <item>Instead of time slices allocation by CFQ, BFQ assigns budgets. Disk is granted to an active process until it\'s budget (number of sectors) expires. BFQ assigns high budgets to non-read tasks. Budget assigned to a process varies over time as a function of it\'s behavior.</item>
     <item>Simple I/O scheduler aims to keep minimum overhead to achieve low latency to serve I/O requests. No priority quesues concepts, but only basic merging. Sio is a mix between noop and deadline. No reordering or sorting of requests.</item>
-    <item>Unlike other schedulers, synchronous and asynchronous requests are not treated separately, instead a deadline is imposed for fairness. The next request to be served is based on it\'s distance from last request.</item>
+    <item>A differenza degli altri pianificatori, le richieste sincrone ed asincrone non sono trattate separatamente e viene imposta una scadenza per equità. La prossima richiesta ad essere servita è basata sulla distanza dall\'ultima richiesta.</item>
   </string-array>
   <string-array name="glo_tcp_titles">
     <item>Tahoe</item>
@@ -488,18 +488,18 @@ default value of 20 it means that if the CPU usage needs to be below
   <string name="volt_info">ATTENTION!\nBefore activating Set on boot, make sure that the values ​​entered do not exceed limits or risk the phone to freeze.</string>
   <string name="ps_volt_mhz_voltage">" Hz"</string>
   <string name="ps_volt_save">"Salva"</string>
-  <string name="ps_volt_current_voltage">"Current voltage: "</string>
-  <string name="ps_volt_setting_to_apply">"Setting to apply: "</string>
-  <string name="pt_volt_control">Voltage control</string>
-  <string name="ps_volt_control">Set voltages for each frequency</string>
-  <string name="apply_values">Apply values</string>
-  <string name="freq">Frequency</string>
-  <string name="current">mV current</string>
+  <string name="ps_volt_current_voltage">"Voltaggio corrente: "</string>
+  <string name="ps_volt_setting_to_apply">"Impostazione da applicare: "</string>
+  <string name="pt_volt_control">Controllo del voltaggio</string>
+  <string name="ps_volt_control">Setta i voltaggi per ogni frequenza</string>
+  <string name="apply_values">Applica i valori</string>
+  <string name="freq">Frequenza</string>
+  <string name="current">corrente mV</string>
   <string name="saved">mV saved</string>
-  <string name="not_supported">Your kernel does not support voltage control</string>
-  <string name="ps_vm_set_on_boot">If enabled will restore all vm settings on reboot</string>
-  <string name="dirty_ratio_title">Dirty ratio</string>
-  <string name="dirty_ratio_summary">A higher ratio means lower CPU but slower app startups</string>
+  <string name="not_supported">Il tuo kernel non supporta il controllo del voltaggio</string>
+  <string name="ps_vm_set_on_boot">Se abilitato ripristinerà le impostazioni della vm al riavvio</string>
+  <string name="dirty_ratio_title">Rapporto dirty</string>
+  <string name="dirty_ratio_summary">Un rapporto più elevato equivale a CPU inferiore ma ad un avvio delle app più lento</string>
   <string name="dirty_background_title">Dirty background ratio</string>
   <string name="dirty_expire_title">Dirty expire centisecs</string>
   <string name="dirty_writeback_title">Dirty writeback centisecs</string>
@@ -515,9 +515,9 @@ default value of 20 it means that if the CPU usage needs to be below
         contacting its developer to inform him that the states file is not
         readable.</string>
   <string name="deep_sleep">"Deep Sleep"</string>
-  <string name="kernel_info">LINUX KERNEL INFORMATION</string>
-  <string name="cpu_info">CPU INFORMATION</string>
-  <string name="mem_info">MEMORY INFORMATION</string>
+  <string name="kernel_info">INFORMAZIONI SUL KERNEL LINUX</string>
+  <string name="cpu_info">INFORMAZIONI SULLA CPU</string>
+  <string name="mem_info">INFORMAZIONI SULLA MEMORIA</string>
   <string name="first_run_title">First check for root</string>
   <string name="su_success_title">Successo!</string>
   <string name="su_failed_title">Ops!</string>

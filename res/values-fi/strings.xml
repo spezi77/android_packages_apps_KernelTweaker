@@ -3,8 +3,8 @@
 <resources>
   <string name="app_name">Kernel Tweaker</string>
   <string name="action_settings">Asetukset</string>
-  <string name="hello_world">Hello world!</string>
-  <string name="blur_radius">Blur Radius</string>
+  <string name="hello_world">Hei maailma!</string>
+  <string name="blur_radius">Sumennuksen Säde</string>
   <string name="apply">Lisää</string>
   <string name="title">Otsikko</string>
   <string name="summary">Yhteenveto</string>
@@ -13,7 +13,7 @@
   <string name="summaryggg">summaryggg</string>
   <string name="empty">Tämä kansio on tyhjä!</string>
   <string name="qqq">qqq</string>
-  <string name="set_on_boot">Set On Boot</string>
+  <string name="set_on_boot">Aseta Käynnistyksessä</string>
   <string name="command">Commands list is empty.\n Tap the plus button to add a command</string>
   <string name="system">System</string>
   <string name="data">Tiedot</string>
