@@ -101,7 +101,7 @@
   <string name="bk_comp">압축 사용</string>
   <string name="bk_md5">MD5 생성 건너뛰기</string>
   <string name="list_command_empty">명령 목록이 비어 있습니다.\n + 버튼을 눌러서 명령어를 추가하세요.</string>
-  <string name="emp_title">EMPTY</string>
+  <string name="emp_title">EMPTY  빈</string>
   <string name="emp_desc">부트 시에 아무 값도 정해져 있지 않음</string>
   <string name="rc_title">루트가 존재하지 않음</string>
   <string name="rc_desc">당신의 기기는 루트 권한이 없는 거 같습니다! SuperSU를 설치 한 후 이용해주세요.</string>
@@ -110,12 +110,12 @@
   <string name="st_cat">커널 트윅커 설정</string>
   <string name="gift">선물이에요 ;)</string>
   <string-array name="lmk_titles">
-    <item>FOREGROUND_APP</item>
+    <item>포그라운드 어플</item>
     <item>VISIBLE_APP</item>
-    <item>SECONDARY_SERVER</item>
-    <item>HIDDEN_APP</item>
+    <item>SECONDARY_서버</item>
+    <item>히든 어플</item>
     <item>CONTENT_PROVIDER</item>
-    <item>EMPTY_APP</item>
+    <item>EMPTY_어플</item>
   </string-array>
   <string-array name="lmk_descs">
     <item>현재 앱은 화면에 있고 실행 중입니다</item>
@@ -139,104 +139,66 @@
   <string name="cpu_governor">가버너</string>
   <string name="cpu_hotplug">핫플러그</string>
   <string name="cpu_cpuquiet_title">Cpuquiet 가버너</string>
-  <string name="cpu_cpuquiet_desc">This governor controls which of the CPU cores are available and when.</string>
+  <string name="cpu_cpuquiet_desc">가버너 CPU를 제어 할수 있습니다.</string>
   <string name="cpu_advanced">고급 설정</string>
   <string name="cpu_adv_gov_title">가버너 튜닝</string>
-  <string name="cpu_adv_gov_desc">Fine tune governor parameters</string>
-  <string name="cpu_adv_quiet_title">Cpuquiet Governor Tuning</string>
-  <string name="cpu_adv_quiet_desc">Fine tune cpuquiet governor parameters</string>
+  <string name="cpu_adv_gov_desc">가버너를 조정합니다.</string>
+  <string name="cpu_adv_quiet_title">CPU를 가버너 튜닝 할수 있습니다.</string>
+  <string name="cpu_adv_quiet_desc">Cpuquiet 를 가버너 조정 할수 있습니다.</string>
   <string name="gov_title">트윅 가능한 가버너 값</string>
-  <string name="gpu_category">GPU parameters</string>
-  <string name="gpu_freq_title">GPU Max Frequency</string>
-  <string name="gpu_freq_desc">Set GPU maximum frequency</string>
+  <string name="gpu_category">GPU를  조정할수 있습니다.</string>
+  <string name="gpu_freq_title">GPU 가버너 최대 클럭</string>
+  <string name="gpu_freq_desc">GPU를 최대클럭 설정입니다.</string>
   <string name="menu_glossary">GLOSSARY</string>
   <string-array name="glo_cpu_titles">
-    <item>Max Frequency</item>
-    <item>Min Frequency</item>
+    <item>최대 클럭</item>
+    <item>최소 클럭</item>
     <item>가버너</item>
-    <item>Cores_on_touch</item>
-    <item>First_level</item>
+    <item>Cores_on_터치</item>
+    <item>마지막 레벨</item>
   </string-array>
   <string-array name="glo_cpu_descs">
-    <item>The maximum frequency the CPU will use. You can lower it to increase battery life, or increase it for performance</item>
-    <item>The minimum frequency the CPU will use. You can increase it for better performance or lower it for battery life</item>
-    <item>This controls the scaling of the CPU frequencies depending on CPU load\n(Click to show governors explanations)</item>
-    <item>How many cores goes online when you touch the screen</item>
-    <item>The threshold that controls when a core will be woked up. Higher the value, harder for CPU core to become online</item>
+    <item>CPU최대 클럭을 이용합니다 배터리  수명을 낮게 하거나 
+퍼포먼스 성능를 올릴수 있습니다.</item>
+    <item>최소클럭 CpU를 이용합니다.성능향상을 위해 올리거나 배터리 수명을 낮출수 있습니다.</item>
+    <item>CPU 로딩에 따라 CPU 클럭을 제어(자세한 설명을 볼려면 터치)</item>
+    <item>CPU  클럭을 설정할때 코어가 온라인으로 움직입니다.</item>
+    <item>CPU 임시 설정 값입니다.</item>
   </string-array>
   <string-array name="glo_gov_titles">
     <item>성능</item>
-    <item>Powersave</item>
-    <item>Userspace</item>
+    <item>절전모드</item>
+    <item>사용자설정</item>
     <item>Ondemand</item>
     <item>Conservative</item>
     <item>Interactive</item>
     <item>Smartass</item>
   </string-array>
   <string-array name="glo_gov_descs">
-    <item>The CPUfreq governor performance sets the CPU statically to the
-highest frequency within the borders of scaling_min_freq and
-scaling_max_freq.</item>
-    <item>The CPUfreq governor powersave sets the CPU statically to the
-lowest frequency within the borders of scaling_min_freq and
-scaling_max_freq.</item>
-    <item>The CPUfreq governor userspace allows the user, or any userspace
-program running with UID root, to set the CPU to a specific frequency
-by making a sysfs file scaling_setspeed available in the CPU-device
-directory.</item>
-    <item>The CPUfreq governor ondemand sets the CPU depending on the
-current usage. To do this the CPU must have the capability to
-switch the frequency very quickly.</item>
-    <item>The CPUfreq governor conservative, much like the ondemand
-governor, sets the CPU depending on the current usage.  It differs in
-behaviour in that it gracefully increases and decreases the CPU speed
-rather than jumping to max speed the moment there is any load on the
-CPU.  This behaviour more suitable in a battery powered environment.</item>
-    <item>The CPUfreq governor interactive is designed for latency-sensitive,
-interactive workloads. This governor sets the CPU speed depending on
-usage, similar to ondemand and conservative governors.  However,
-the governor is more aggressive about scaling the CPU speed up in
-response to CPU-intensive activity.
-
-Sampling the CPU load every X ms can lead to under-powering the CPU
-for X ms, leading to dropped frames, stuttering UI, etc.  Instead of
-sampling the cpu at a specified rate, the interactive governor will
-check whether to scale the cpu frequency up soon after coming out of
-idle.  When the cpu comes out of idle, a timer is configured to fire
-within 1-2 ticks.  If the cpu is very busy between exiting idle and
-when the timer fires then we assume the cpu is underpowered and ramp
-to MAX speed.
-
-If the cpu was not sufficiently busy to immediately ramp to MAX speed,
-then governor evaluates the cpu load since the last speed adjustment,
-choosing the highest value between that longer-term load or the
-short-term load since idle exit to determine the cpu speed to ramp to.</item>
-    <item>Result of Erasmux rewriting the complete code of interactive governor.
-             Main goal is to optimize battery life without comprising performance. 
-             Still, not as battery friendly as smartassV2 since screen-on minimum frequency is greater than frequencies used during screen-off. Smartass would jump up to highest frequency too often as well.</item>
+    <item>CPUfreq 가버너 성능을 가장 높은 클럭을 설정합니다.</item>
+    <item> cpufred 절전모드를 낮은 클럭으로 설정 합니다.</item>
+    <item>CPUfred 가버너 사용자 공간과 
+프로그램을 설정 할려면 루팅이 필요합니다.</item>
+    <item>Cpufreq 가버너 온디멘드 사용량에 따라 cpu를 설정합니다.</item>
+    <item>온디맨드 주지사 처럼 보수적인 CPUfreq 주지사는 현재 사용량에 따라 CPU를 설정합니다.  그것은 달리 행동에 정상적으로 증가 하 고 CPU 속도 감소 보다는 최대 속도로 점프 순간 거기 어떤 CPU의 로드를 합니다.  이 동작은 배터리 구동 환경에 더 적합 합니다.</item>
+    <item>대화형 CPUfreq 주지사는 대기 시간에 민감한, 대화형 작업에 대 한 설계 되었습니다. 이 주지사 사용, 온디맨드 및 보수적인 주지사와 유사에 따라 CPU 속도를 설정합니다. 그러나, 주지사는 CPU 집약적인 작업에 대 한 응답에서 CPU 속도 업그레이드에 대 한 더 공격적 이다. 샘플링 CPU 부하 마다 X ms UI 등에 따르면 드롭된 프레임으로 이어지는 ms, X에 대 한 CPU 전원에서-발생할 수 있습니다. 지정 된 속도로 cpu 샘플링 대신 대화형 주지사 곧 나오는 유휴 후 cpu 주파수를 확장할지 여부를 확인 합니다. Cpu의 유휴 나올 때 1 ~ 2 틱 내 화재 타이머 구성 됩니다. Cpu가 유휴 종료 사이 매우 바쁜 경우와 타이머 발생 하면 우리가 cpu underpowered 이며 최대 램프 속도 가정 합니다. Cpu 최대 속도를 즉시 진입으로 충분히 바쁜 있었다면 다음 주지사 평가 cpu 부하 마지막 속도 조정부터 경사로에 cpu 속도 확인 하기 위해 유휴 종료 이후 그 장기 로드 또는 단기 부하 사이의 가장 높은 값을 선택 합니다.</item>
+    <item>대화형 주지사의 완전 한 코드를 다시 작성 하는 Erasmux의 결과입니다.              성능 구성 없이 배터리 수명을 최적화 하기 위해 주요 목표가입니다.               아직도, 배터리 이기 때문에 화면에 최소 주파수 화면 오프 시 사용 되는 주파수 보다 큰 smartassV2로 친절 한 아니라. 수 재가 너무 자주 또한 높은 클럭까지 뛰어 내리고 싶다.  </item>
   </string-array>
   <string-array name="glo_ondemand_titles">
     <item>sampling_rate</item>
     <item>up_threshold</item>
-    <item>powersave_bias</item>
+    <item>절전_bias</item>
     <item>sampling_down_factor</item>
     <item>down_differential</item>
     <item>freq_step</item>
   </string-array>
   <string-array name="glo_ondemand_descs">
-    <item>Measured in uS , this is how often the kernel look at the CPU usage and make decisions on what to do about the frequency. Higher values means CPU polls less often. For lower frequencies, this could be considered an advantage since it might not jump to next frequency very often, but for higher frequencies, the scale-down time will be increased.</item>
-    <item>Measured in percentage from 1 to 100, When CPU load reaches this point, governor will scale CPU up. Higher value means less responsiveness and lower values corresponds to more responsiveness at the cost of battery. </item>
-    <item>Default value is 0. Setting a higher value will bias the governor towards lower frequency steps. Use this if you want CPU to spend less time on higher frequencies. A better alternative would be to underclock to a lower frequency than using powersave bias.</item>
-    <item>In the simplest form, sampling_down_factor determines how often CPU should stay at higher frequencies when truly busy. Default behavior is fast switching to lower frequencies (1). Having sampling_down_factor set to 1 makes no changes from existing behavior (for the non-modified ondemand), but having sampling_down_factor set to a value greater than 1 causes it to act as a multiplier for the scheduling interval for re-evaluating the load when the CPU is at its highest clock frequency (which is scaling_max_freq) due to high load. This improves performance by reducing the overhead of load evaluation and helping the CPU stay at its highest clock frequency when it is truly busy, rather than shifting back and forth in speed. This tunable has no effect on behavior at lower frequencies/lower CPU loads.</item>
-    <item>This factor indirectly calculate the down-threshold of Ondemand. 
-            After completing sampling-down-factor*sampling-rate at max frequency because of high load, 
-            governor samples the load again to calculate an estimate of the new target frequency in a 
-            way that the lowest frequency will be chosen that would not trigger up_threshold in the 
-            next sample. Because triggering up-threshold will again cause CPU to scale up to max frequency. 
-            During this choice down_differential is taken into account as a breathing room value. 
-            Target frequency is calculated as max_load_freq / (up_threshold - down_differential). The obtained value might be a non-existent value in the freq_table and CPU driver will round it off to a value in freq_table. max_load_freq is the theoretical frequency at which CPU can handle 100% workload. 
-            It is usually a value below scaling_max_freq.</item>
-    <item>Whenever up-scaling logic is triggered the governor instructs the CPU to raise its frequency by freq_step percentage of max allowed frequency.</item>
+    <item>우리 측정, 이것은 얼마나 자주 커널 CPU 사용량을 보면 주파수에 대 한 어떻게에 결정. 더 높은 값 의미 CPU를 덜 자주 폴링합니다. 더 낮은 주파수에 대 한이 간주 될 수 이점 때문에 그것은 매우 자주, 다음 주파수에 도약 하지 수도 있습니다 하지만 더 높은 주파수에 대 한 스케일 다운 시간이 증가 됩니다.</item>
+    <item>100에서 1 비율, 측정 때 CPU 부하가이 지점에 도달, 주지사까지 CPU를 확장할 것 이다. 높은 값 배터리 비용 더 많은 응답에 해당 하는 적은 응답성 및 더 낮은 값을 의미 합니다. </item>
+    <item>기본값은 0입니다. 더 높은 값을 설정 낮은 주파수 단계 향해 주지사를 바이어스 이다. 더 높은 주파수에 더 적은 시간을 할애 CPU를 원하는 경우에 사용 합니다. 더 나은 대안이 underclock 절전 바이어스를 사용 하 여 보다 낮은 주파수로 하는 것입니다.</item>
+    <item>가장 간단한 형태로 sampling_down_factor CPU 정말 바쁠 때 더 높은 주파수에서 얼마나 자주 있어야 결정 합니다. 기본 동작은 빠르고 낮은 주파수 (1)로 전환입니다. (대 한 여 비 수정 온디맨드), 기존 동작에서 변경 되지 않습니다 sampling_down_factor를 1로 설정 하는 데 하지만 때 CPU (scaling_max_freq) 인 그것의 가장 높은 클록 주파수에서 높은 로드로 인해 다시 부하를 평가 하기 위해 일정 간격에 대 한 승수 행위로 인해 sampling_down_factor 1 보다 큰 값으로 설정 하는 데. 부하 평가의 오버 헤드를 감소 시키고 정말 바쁜 때 앞뒤로 다시 이동 하는 속도에 보다는 오히려 그것의 가장 높은 클록 주파수에서 CPU 숙박을 돕는 성능이 향상 됩니다. 이 가변은 낮은 주파수/낮은 CPU 부하에 동작에 효과가 없습니다.</item>
+    <item>이 요소에서 온디맨드의 문 턱 직접 계산할 수 있습니다.              샘플링 아래 단계를 완료 한 후 * 높은 부하 때문에 최대 주파수 샘플링 속도, 주지사 샘플링 하는 방식으로 최저 주파수를 선택한 것입니다 다음 샘플에서 up_threshold를 실행 하지 것 이라고 하는 새로운 대상 주파수의 견적을 계산 하기 위해 다시 로드 합니다. 때문에 최대 임계값 트리거 다시 CPU 최대 주파수를 최대 규모.              이 선택 하는 동안 down_differential 계정에 숨 쉴 여유 값으로 이루어집니다.              대상 주파수는 max_load_freq로 계산 / (up_threshold-down_differential). 획득된 값 freq_table 및 CPU 드라이버에서 존재 하지 않는 값은 반올림 그것 freq_table에 값을 수 있습니다. max_load_freq은 이론적인 주파수 CPU 100% 작업을 처리할 수 있습니다.              그것은 일반적으로 scaling_max_freq 아래 값입니다.</item>
+    <item>업 스케일링 논리 실행 때마다 주지사 freq_step 최대 허용된 주파수의 비율에 의해 그것의 주파수를 마련 하기 위해 CPU를 지시 합니다.</item>
   </string-array>
   <string-array name="glo_interactive_titles">
     <item>hispeed_freq</item>
@@ -245,88 +207,63 @@ short-term load since idle exit to determine the cpu speed to ramp to.</item>
     <item>timer_rate</item>
     <item>above_hispeed_delay</item>
     <item>input_boost</item>
-    <item>boost</item>
+    <item>부스트</item>
     <item>boostpulse</item>
   </string-array>
   <string-array name="glo_interactive_descs">
-    <item>An intermediate hi speed at which to initially ramp
-when CPU load hits the value specified in go_hispeed_load.  If load
-stays high for the amount of time specified in above_hispeed_delay,
-then speed may be bumped higher.  Default is maximum speed.</item>
-    <item>The CPU load at which to ramp to the intermediate hi
-speed.  Default is 85%.</item>
-    <item>The minimum amount of time to spend at the current
-frequency before ramping down. This is to ensure that the governor has
-seen enough historic cpu load data to determine the appropriate
-workload.  Default is 80000 uS.</item>
-    <item>Sample rate for reevaluating cpu load when the system is
-not idle.  Default is 20000 uS.</item>
-    <item>Once speed is set to hispeed_freq, wait for this
-long before bumping speed higher in response to continued high load.
-Default is 20000 uS.</item>
-    <item>Once speed is set to hispeed_freq, wait for this
-long before bumping speed higher in response to continued high load.
-Default is 20000 uS.</item>
-    <item>If non-zero, boost speed of all CPUs to hispeed_freq on
-touchscreen activity.  Default is 0.</item>
-    <item>If non-zero, immediately boost speed of all CPUs to at least
-hispeed_freq until zero is written to this attribute.  If zero, allow
-CPU speeds to drop below hispeed_freq according to load as usual.</item>
-    <item>Immediately boost speed of all CPUs to hispeed_freq for
-min_sample_time, after which speeds are allowed to drop below
-hispeed_freq according to load as usual.</item>
+    <item>중간 고속에서 처음 진입 때 CPU 부하 안타 go_hispeed_load에 지정 된 값을.  만약 부하 above_hispeed_delay에 지정 된 시간 동안 높은 유지, 다음 속도 수 있습니다 승진 될 높은.  기본값은 최대 속도.</item>
+    <item>CPU 로드 진입로 중간에 안녕 속도입니다.  기본값은 85%입니다.</item>
+    <item>아래 올 렸 전에 현재 주파수에서 보내는 시간을 최소 금액. 이 지사 적절 한 작업을 확인 하기 위해 데이터를 로드 하는 만큼 역사적인 cpu 본입니다.  기본값은 80000 미국.</item>
+    <item>시스템이 유휴 상태일 때 cpu 부하를 재평가 대 한 샘플 속도.  기본값은 20000 미국.</item>
+    <item>속도 hispeed_freq로 설정 되 면 응답에 더 높은 속도 지원 해주 전에이 오랫동안 대기 높은 하 중을 계속 했다. 기본값은 20000 미국.</item>
+    <item>속도 hispeed_freq로 설정 되 면 응답에 더 높은 속도 지원 해주 전에이 오랫동안 대기 높은 하 중을 계속 했다. 기본값은 20000 미국.</item>
+    <item>0이 아닌 경우 hispeed_freq 터치 스크린 활동에 모든 Cpu의 속도 향상.  기본값은 0입니다.</item>
+    <item>0이 아닌 경우 즉시 속도 높일을 모든 Cpu의 적어도 hispeed_freq 때까지이 특성을 0이 쓰여집니다.  0, hispeed_freq 부하에 따라 평소 처럼 떨어지는 CPU 속도 허용 합니다.</item>
+    <item>즉시 후 속도 평소 부하에 따라 hispeed_freq 아래의 드롭 수 있습니다 min_sample_time에 대 한 hispeed_freq에 모든 Cpu의 속도 향상.</item>
   </string-array>
   <string-array name="glo_conservative_titles">
     <item>freq_step</item>
     <item>down_threshold</item>
   </string-array>
   <string-array name="glo_conservative_descs">
-    <item>this describes what percentage steps the cpu freq should be
-increased and decreased smoothly by.  By default the cpu frequency will
-increase in 5% chunks of your maximum cpu frequency.  You can change this
-value to anywhere between 0 and 100 where 0 will effectively lock your
-CPU at a speed regardless of its load whilst 100 will, in theory, make
-it behave identically to the ondemand governor.</item>
-    <item>same as the up_threshold found for the ondemand
-governor but for the opposite direction.  For example when set to its
-default value of 20 it means that if the CPU usage needs to be below
-20% between samples to have the frequency decreased.</item>
+    <item>이 백분율 cpu 주파수 증가 해야 하 고 원활 하 게 감소 단계를 설명 합니다.  기본적으로 cpu 주파수는 최대 cpu 주파수의 5% 상당 부분에서 증가할 것 이다.  이 값을 어디에서 든 지 0에서 어디 0 잠글 것 이다 효과적으로 CPU의 부하에 관계 없이 속도로 100는, 이론에서 하는 동안 100 사이의 온디맨드 총재에 게 동일 하 게 동작 하도록 변경할 수 있습니다.</item>
+    <item>온디맨드 주지사 하지만 반대 방향으로 up_threshold와 동일 합니다.  예를 들어 CPU 사용량 감소 하는 주파수를 샘플 사이 20% 미만 이어야 하는 경우를 의미 하는 20의 기본값을 설정 하면.</item>
   </string-array>
   <string-array name="glo_gpu_titles">
-    <item>GPU Max Frequency</item>
+    <item>GPU 가버너 최대 클럭</item>
     <item>up_threshold</item>
     <item>down_threshold</item>
     <item>sample_time_ms</item>
   </string-array>
   <string-array name="glo_gpu_descs">
-    <item>The maximum clock that the GPU can use. Reduce this frequency for better battery life at cost of performance</item>
-    <item>When the GPU load is equal or above this value the GPU governor will increase the frequency</item>
-    <item>When the GPU load is equal or above this value the GPU governor will decrease the frequency</item>
-    <item>This is how often the governor polls for the GPU load. Increase for battery life, decrease for performance. 1000 equals 1 second.</item>
+    <item>최대 클럭 GPU를 사용할 수 있습니다. 이 성과의 비용에 더 나은 배터리 수명에 대 한이 클럭 감소</item>
+    <item>이 때 GPU 부하 또는이 값 GPU 위에 주지사 빈도 증가</item>
+    <item>이 때 GPU 부하 또는이 값 GPU 위에 주지사 빈도 증가</item>
+    <item>이것이 얼마나 자주 주지사 GPU 부하 폴링합니다. 배터리 수명을 증가, 성능에 대 한 감소. 1000 1 초 같습니다.</item>
   </string-array>
   <string-array name="glo_uv_titles">
-    <item>UnderVolting</item>
+    <item>언더클럭킹</item>
   </string-array>
   <string-array name="glo_uv_descs">
-    <item>UnderVolt table allows you to change the voltage parameter of every frequency. This means that you can set, for every frequency, how much current the CPU 
-            must use. Lowering voltages means some battery saving, but you are warned! Lowering frequencies too much can make your device crash or freeze, so proceed with little steps 
-            until you find your ideal spot. Hit the \"Set on boot\" option ONLY after some tests or your device will freeze/crash on next reboot!</item>
+    <item>UnderVolt 표를 사용 하 여 모든 주파수의 전압 매개 변수를 변경할 수 있습니다. 즉, 설정할 수 있습니다, 모든 주파수, 현재 얼마나 많은 CPU를 사용 해야 합니다. 전압을 낮추는 것을 의미 몇 가지 배터리 절약, 하지만 당신은 경고! 너무 많은 주파수를 낮추는 장치 충돌 또는 동결, 그래서 당신이 당신의 이상적인 장소를 찾을 때까지 작은 단계를 진행 할 수 있습니다. 히트는 \"부팅\"설정 옵션을 몇 가지 테스트 또는 장치 것 동결/충돌 다음 재 부 팅 후에!</item>
   </string-array>
   <string-array name="glo_kernel_titles">
-    <item>I/O Scheduler</item>
-    <item>Read ahead size</item>
-    <item>TCP Congestion control</item>
+    <item>I/O 스케줄러</item>
+    <item>읽기 미리 크기</item>
+    <item>TCP 혼잡 제어</item>
     <item>Fsync</item>
-    <item>Fast Charge</item>
-    <item>Vibration Intensity</item>
+    <item>고속충전</item>
+    <item>진동 강도</item>
     <item>Temp_threshold</item>
     <item>Headset_boost</item>
     <item>Mic_boost</item>
-    <item>Speaker_boost</item>
-    <item>Volume_boost</item>
+    <item>
+스피커 부스트</item>
+    <item>불륨 부스트</item>
   </string-array>
   <string-array name="pie_colors">
-    <item>#ffffff</item>
+    <item>
+#ffffff</item>
     <item>#9c35d0</item>
     <item>#33b5e5</item>
     <item>#fb8600</item>
@@ -335,9 +272,11 @@ default value of 20 it means that if the CPU usage needs to be below
     <item>#009cd0</item>
     <item>#689c00</item>
     <item>#ff4646</item>
-    <item>#9ed201</item>
+    <item>
+#9ed201</item>
     <item>#ac68ce</item>
-    <item>#ffffff</item>
+    <item>
+#ffffff</item>
     <item>#9c35d0</item>
     <item>#33b5e5</item>
     <item>#fb8600</item>
@@ -346,503 +285,444 @@ default value of 20 it means that if the CPU usage needs to be below
     <item>#009cd0</item>
     <item>#689c00</item>
     <item>#ff4646</item>
-    <item>#9ed201</item>
+    <item>
+#9ed201</item>
     <item>#ac68ce</item>
   </string-array>
   <string-array name="glo_kernel_descs">
-    <item>Is the method that computer operating systems use to decide which order block I/O operations will be submitted to storage volumes. I/O Scheduling is sometimes called disk scheduling.\n\n(click for Sheduler types explanation)</item>
-    <item>It is a system call that loads a file\'s contents into the page cache. When a file is subsequently accessed, its contents are read from physical memory rather than from disk, which is much faster.</item>
-    <item>(click to show algorithms explanation)\n\nTo avoid congestion collapse, TCP uses a multi-faceted congestion-control strategy.
-             For each connection, TCP maintains a congestion window, 
-             limiting the total number of unacknowledged packets that may be in transit end-to-end. 
-             This is somewhat analogous to TCP\'s sliding window used for flow control. 
-             TCP uses a mechanism called slow start to increase the congestion window after a connection is initialized and after a timeout. 
-             It starts with a window of two times the maximum segment size (MSS). 
-             Although the initial rate is low, the rate of increase is very rapid: 
-             for every packet acknowledged, the congestion window increases by 1 MSS 
-             so that the congestion window effectively doubles for every round-trip time (RTT). 
-             When the congestion window exceeds a threshold ssthresh the algorithm enters a new state, 
-             called congestion avoidance. In some implementations (e.g., Linux), the initial ssthresh is large,
-              and so the first slow start usually ends after a loss. 
-              However, ssthresh is updated at the end of each slow start, 
-              and will often affect subsequent slow starts triggered by timeouts.</item>
-    <item>Fsync transfers (\"flushes\") all modified in-core data of (i.e.,
-       modified buffer cache pages for) the file referred to by the file
-       descriptor to the disk device (or other permanent storage device)
-       so that all changed information can be retrieved even after the
-       system crashed or was rebooted.  This includes writing through or
-       flushing a disk cache if present.  The call blocks until the device
-       reports that the transfer has completed.  It also flushes metadata
-       information associated with the file </item>
-    <item>Fast Charge function will drain more current from PC or Notebook when your device is plugged, so your device will charge faster.
-            Fast Charge will not damage your device and will not damage your laptop.</item>
-    <item>This parameter will change the vibration strength. Increasing this value means a stronger vibration feedback. Minimum values is 0, maximum 100</item>
-    <item>Maximum CPU temperature before the CPU gets throttled down to become cooler. Values are in °C</item>
-    <item>Increase or decrease headsets gain. Values from -20 to 20</item>
-    <item>Increase or decrease microphone gain. Values from -20 to 20</item>
-    <item>Increase or decrease speaker gain. Values from -20 to 20</item>
-    <item>Increase or decrease volume gain. Values from -20 to 20</item>
+    <item>컴퓨터 운영 체제를 순서 블록 I/O 작업 저장소 볼륨에 제출 될 것 이다 결정에 사용 하는 방법이입니다. I/O 예약 디스크 scheduling.\n\n Sheduler 유형 설명 (클릭)이 라고도</item>
+    <item>페이지 캐시에 파일의 내용을 로드 하는 시스템 호출입니다. 파일 액세스는, 내용 보다 훨씬 빠른 디스크는 실제 메모리에서 읽을 수 있습니다.</item>
+    <item>(알고리즘 설명은 표시 클릭) \n\nTo 혼잡 붕괴 방지, TCP는 다방면 혼잡 제어 전략을 사용 합니다.              각 연결에 대 한 TCP 혼잡 창을 유지 환승 끝에 있을 수 있습니다 되지 않은 패킷의 총 수를 제한 합니다.               이것은 흐름 제어에 사용 되는 TCP의 슬라이딩 윈도우 다소 비슷합니다.               TCP 느린 시작 라는 메커니즘을 사용 하 여 증가 혼잡 창 연결 초기화 후 타임 아웃 후.               그것은 두 번 최대 세그먼트 크기 (MSS)의 창을 시작합니다.               증가 속도가 매우 빠른 초기 속도가 낮은, 비록: 인정 모든 패킷에 대 한 혼잡 창 1 씩 증가 MSS는 혼잡 창 효과적으로 모든 왕복 시간 (RTT)에 대 한 복식.               혼잡 창 초과 임계값 ssthresh 알고리즘 혼잡 회피 라는 새로운 상태를 입력 합니다. 일부 경우 (예: 리눅스), 초기 ssthresh 큰 이며 그래서 처음 느린 시작은 일반적으로 손실 후 종료.                그러나, ssthresh 각 느린 시작의 끝에서 업데이트 되 고 수시로 연속적인 느린 시작 시간 제한에 의해 발생에 영향을 미칠 것 이다.</item>
+    <item>Fsync 전송 (\"플러시\") 모든 수정에 코어 데이터 (즉, 수정 된 버퍼 캐시 페이지)는 시스템 충돌 또는 재 부 팅 되었습니다 후에 파일에 의해 참조 된 디스크 장치 (또는 다른 영구 저장 장치)에 대 한 파일 설명자 모든 변경 정보를 검색할 수 있습니다.  이 통해 작성 하거나 있는 경우 디스크 캐시를 플러시 포함 되어 있습니다.  호출 블록 장치 보고는 전송이 완료 될 때까지.  파일에 연결 된 메타 데이터 정보를 플러시합니다. </item>
+    <item>빠른 충전 기능 방전 됩니다 PC 또는 노트북에서 현재 장치가 연결 되었을 때 그래서 장치를 빨리 위탁 할 것 이다.             빠른 충전 장치를 손상 하지 않습니다 및 귀하의 노트북을 손상 하지 않습니다.</item>
+    <item>이 매개 변수는 진동 강도 변경 합니다. 이 값을 늘리면 더 강한 진동 피드백을 의미 합니다. 최소 값은 0으로, 최대 100</item>
+    <item>최대 CPU 온도 CPU 쿨러가 아래로 축소 되 면 전에. ° C에서에서 값은</item>
+    <item>증가 또는 감소 헤드셋 이득. 20-20에서 값</item>
+    <item>마이크 이득을 늘리거나 설정 합니다. 20-20에서 값</item>
+    <item>스피커 이득을 늘리거나 설정 합니다. 20-20에서 값</item>
+    <item>볼륨 증가 늘리거나 설정 합니다. 20-20에서 값</item>
   </string-array>
   <string-array name="glo_sched_titles">
     <item>Noop</item>
-    <item>Deadline</item>
+    <item>마감일</item>
     <item>CFQ</item>
     <item>BFQ</item>
     <item>SIO</item>
     <item>V(R)</item>
   </string-array>
   <string-array name="glo_sched_descs">
-    <item>Inserts all the incoming I/O requests to a First In First Out queue and implements request merging. Best used with storage devices that does not depend on mechanical movement to access data (yes, like our flash drives). Advantage here is that flash drives does not require reordering of multiple I/O requests unlike in normal hard drives.</item>
-    <item>Goal is to minimize I/O latency or starvation of a request. The same is achieved by round robin policy to be fair among multiple I/O requests. Five queues are aggressively used to reorder incoming requests.</item>
-    <item>Completely Fair Queuing scheduler maintains a scalable per-process I/O queue and attempts to distribute the available I/O bandwidth equally among all I/O requests. Each per-process queue contains synchronous requests from processes. Time slice allocated for each queue depends on the priority of the parent process. V2 of CFQ has some fixes which solves process\' i/o starvation and some small backward seeks in the hope of improving responsiveness.</item>
-    <item>Instead of time slices allocation by CFQ, BFQ assigns budgets. Disk is granted to an active process until it\'s budget (number of sectors) expires. BFQ assigns high budgets to non-read tasks. Budget assigned to a process varies over time as a function of it\'s behavior.</item>
-    <item>Simple I/O scheduler aims to keep minimum overhead to achieve low latency to serve I/O requests. No priority quesues concepts, but only basic merging. Sio is a mix between noop and deadline. No reordering or sorting of requests.</item>
-    <item>Unlike other schedulers, synchronous and asynchronous requests are not treated separately, instead a deadline is imposed for fairness. The next request to be served is based on it\'s distance from last request.</item>
+    <item>첫 번째에 먼저 밖으로 큐에 들어오는 모든 I/O 요청을 삽입 하 고 요청 병합을 구현 합니다. (예, 우리의 플래시 드라이브)와 같은 데이터에 액세스할 수 기계적 움직임에 의존 하지 않는 저장 장치를 사용 합니다. 여기 장점은 플래시 드라이브의 정상적인 하드 드라이브에서와 달리 여러 I/O 요청 순서 필요 하지 않습니다.</item>
+    <item>목표는 I/O 대기 시간 요구의 기아를 최소화 합니다. 같은 여러 I/O 요청 사이에서 공정 하 게 라운드 로빈 정책에 의해 이루어집니다. 5 큐 적극적으로 들어오는 요청을 다시 정렬 하는 데 사용 됩니다.</item>
+    <item>완전히 공정한 큐 스케줄러 확장 가능한 프로세스 당 I/O 큐 유지 하 고 모든 I/O 요청 사이에서 동등 하 게 사용할 수 있는 I/O 대역폭을 배포 하려고 합니다. 각 과정 당 큐 프로세스에서 동기 요청을 포함 되어 있습니다. 각 큐에 대 한 할당 시간 조각 부모 프로세스의 우선 순위에 따라 달라 집니다. V 2의 CFQ는 일부 수정은 해결 프로세스의 i/o 기아와 몇몇 작은 뒤로 응답성을 개선의 희망에 찾습니다.</item>
+    <item>시간 조각 할당 CFQ로 대신 BFQ 예산을 할당합니다. 예산 (섹터 수) 만료 될 때까지 디스크는 활성 프로세스에 부여 됩니다. BFQ 높은 예산이 아닌 읽기 작업에 할당합니다. 프로세스에 할당 된 예산에 그것의 행동의 기능으로 시간이 지남에 따라 다릅니다.</item>
+    <item>간단한 I/O 스케줄러 I/O 요청을 처리 하는 낮은 대기 시간을 달성 하기 위해 오버 헤드가 최소 유지 하는 것을 목표로. 없음 우선 순위 quesues 개념, 기본 병합만 하지만. Sio는 noop 마감 사이 혼합 이다. 아무 순서 변경 또는 정렬 요청입니다.</item>
+    <item>다른 스케줄러와는 달리 동기 및 비동기 요청을 별도로 처리 되지 않습니다, 그리고 공정성에 대 한 마감일은 부과 하는 대신. 제공 될 수 있도록 다음 요청 마지막 요청에서 거리를 기반으로 합니다.</item>
   </string-array>
   <string-array name="glo_tcp_titles">
-    <item>Tahoe</item>
-    <item>Reno</item>
-    <item>Vegas</item>
-    <item>New Reno</item>
+    <item>타호</item>
+    <item>리노</item>
+    <item>라스베가스</item>
+    <item>새로운 리노</item>
     <item>Hybla</item>
-    <item>BIC</item>
-    <item>CUBIC</item>
-    <item>westwood</item>
-    <item>scalable</item>
-    <item>HTCP</item>
+    <item>빅</item>
+    <item>입방</item>
+    <item>웨스트 우드</item>
+    <item>확장 가능한</item>
+    <item>HTCp</item>
   </string-array>
   <string-array name="glo_tcp_descs">
-    <item>Triple duplicate ACKS are treated the same as a timeout. Tahoe will perform \"fast retransmit\", set the slow start threshold to half the current congestion window, reduce congestion window to 1 MSS, and reset to slow-start state.</item>
-    <item>If three duplicate ACKs are received (i.e., four ACKs acknowledging the same packet, which are not piggybacked on data, and do not change the receiver\'s advertised window), Reno will halve the congestion window (instead of setting it to 1 MSS like Tahoe), set the slow start threshold equal to the congestion window, perform a fast retransmit, and enter a phase called Fast Recovery. 
-    	    If an ACK times out, slow start is used as it is with Tahoe.</item>
-    <item>Until the mid-1990s, all of TCP\'s set timeouts and measured round-trip delays were based upon only the last transmitted packet in the transmit buffer. University of Arizona researchers Larry Peterson and Lawrence Brakmo introduced TCP Vegas, named after the largest Nevada city, in which timeouts were set and round-trip delays were measured for every packet in the transmit buffer. In addition, TCP Vegas uses additive increases in the congestion window. This variant was not widely deployed outside Peterson\'s laboratory. In a comparison study of various TCP congestion control algorithms, TCP Vegas appeared to be the smoothest followed by TCP CUBIC.</item>
-    <item>TCP New Reno, defined by RFC 6582 (which obsoletes previous definitions in RFC 3782 and RFC 2582), improves retransmission during the fast-recovery phase of TCP Reno. During fast recovery, for every duplicate ACK that is returned to TCP New Reno, a new unsent packet from the end of the congestion window is sent, to keep the transmit window full. For every ACK that makes partial progress in the sequence space, the sender assumes that the ACK points to a new hole, and the next packet beyond the ACKed sequence number is sent.
-Because the timeout timer is reset whenever there is progress in the transmit buffer, this allows New Reno to fill large holes, or multiple holes, in the sequence space – much like TCP SACK. Because New Reno can send new packets at the end of the congestion window during fast recovery, high throughput is maintained during the hole-filling process, even when there are multiple holes, of multiple packets each. When TCP enters fast recovery it records the highest outstanding unacknowledged packet sequence number. When this sequence number is acknowledged, TCP returns to the congestion avoidance state.
-A problem occurs with New Reno when there are no packet losses but instead, packets are reordered by more than 3 packet sequence numbers. When this happens, New Reno mistakenly enters fast recovery, but when the reordered packet is delivered, ACK sequence-number progress occurs and from there until the end of fast recovery, every bit of sequence-number progress produces a duplicate and needless retransmission that is immediately ACKed.
-New Reno performs as well as SACK at low packet error rates, and substantially outperforms Reno at high error rates.</item>
-    <item>TCP Hybla aims to eliminate penalization of TCP connections that incorporate a high-latency terrestrial or satellite radio link, due to their longer round trip times. It stems from an analytical evaluation of the congestion window dynamics, which suggests the necessary modifications to remove the performance dependence on RTT.</item>
-    <item>Binary Increase Congestion control is an implementation of TCP with an optimized congestion control algorithm for high speed networks with high latency (called LFN, long fat networks, in RFC 1072). BIC is used by default in Linux kernels 2.6.8 through 2.6.18.</item>
-    <item>CUBIC is a less aggressive and more systematic derivative of BIC, in which the window is a cubic function of time since the last congestion event, with the inflection point set to the window prior to the event. CUBIC is used by default in Linux kernels since version 2.6.19.</item>
-    <item>TCP Westwood (TCPW) is a sender-side-only modification to TCP New Reno that is intended to better handle large bandwidth-delay product paths (large pipes), with potential packet loss due to transmission or other errors (leaky pipes), and with dynamic load (dynamic pipes).
-TCP Westwood relies on mining the ACK stream for information to help it better set the congestion control parameters: Slow Start Threshold (ssthresh), and Congestion Window (cwin). In TCP Westwood, an \"Eligible Rate\" is estimated and used by the sender to update ssthresh and cwin upon loss indication, or during its \"Agile Probing\" phase, a proposed modification to the well-known Slow Start phase. In addition, a scheme called Persistent Non Congestion Detection (PNCD) has been devised to detect persistent lack of congestion and induce an Agile Probing phase to expeditiously utilize large dynamic bandwidth.</item>
-    <item>Scalable TCP modifies the congestion control algorithm. Instead of halving the congestion window size, each packet loss decreases the congestion window by a small fraction (a factor of 1/8 instead of Standard TCP\'s 1/2) until packet loss stops. When packet loss stops, the rate is ramped up at a slow fixed rate (one packet is added for every one hundred successful acknowledgements) instead of the Standard TCP rate that\'s the inverse of the congestion window size (thus very large windows take a long time to recover). This helps reduce the recovery time on 10 Gbit links from 4+ hours (using Standard TCP) to less than 15 seconds when the round trip time is 200 milliseconds.</item>
-    <item>H-TCP is a loss-based algorithm, using additive-increase/multiplicative-decrease (AIMD) to control TCP\'s congestion window. It is one of many TCP congestion avoidance algorithms which seeks to increase the aggressiveness of TCP on high bandwidth-delay product (BDP) paths, while maintaining \"TCP friendliness\" for small BDP paths. H-TCP increases its aggressiveness (in particular, the rate of additive increase) as the time since the previous loss increases. This avoids the problem encountered by HSTCP and BIC TCP of making flows more aggressive if their windows are already large. Thus, new flows can be expected to converge to fairness faster under HTCP than HSTCP and BIC TCP.</item>
+    <item>트리플 중복 ACK 처리 시간 초과 동일 합니다. 타호 \"빠른 재전송\" 수행 됩니다 절반 현재 혼잡 창에 느린 시작 임계값 설정, 1로 혼잡 창을 감소 MSS, 및 리셋 느린 시작 상태.</item>
+    <item>3 중복 Ack가 수신 하는 경우 (즉, 4 개의 Ack 인정 같은 패킷 데이터에 편승 하지는 수신기의 보급된 창을 변경 하지 마십시오), 리노 혼잡 윈도우를 이등분 합니다 (1로 설정 하는 대신 MSS 같은 타호) 설정 느린 시작 임계값 혼잡 창, 빠른 재전송을 수행 하며 빠른 복구 라는 단계를 입력.           ACK 시간 초과, 타호와 그것이 느린 시작 사용 됩니다.</item>
+    <item>1990 년대 중반까지 모든 TCP의 설정된 시간 초과 및 측정 된 왕복 지연만의 마지막 전송된 패킷 전송 버퍼에 근거 했다. 애리조나 대학 연구팀은 래리 피터슨과 로렌스 Brakmo TCP Vegas, 큰 네바다 도시, 시간 제한 설정 된 및 왕복 지연 전송 버퍼에 모든 패킷에 대 한 측정 되었다 이름을 따서 소개. 더하여, TCP Vegas 혼잡 창에서 더하기 증가 사용합니다. 이 이체는 피터슨 연구소 밖에 서 널리 배포 되지. 다양 한 TCP 혼잡 제어 알고리즘의 비교 연구에서 TCP Vegas는 매끄러운 뒤 TCP 입방 것 처럼 보였다.</item>
+    <item>RFC 6582 (는 RFC 3782 및 RFC 2582 이전 정의 obsoletes)에 의해 정의 된 TCP 새로운 리노 TCP 리노의 빠른 복구 단계 동안 재전송을 향상 시킵니다. 빠른 복구 동안 TCP 새로운 리노로 반환 되는 모든 중복 ACK에 대 한 혼잡 창의 끝에서 새로운 보내지 않은 패킷이 보내집니다, 전체 전송 창이 계속. 순서 공간에서 일부 진행 하 게 모든 ACK에 대 한 보낸 ACK 새로운 구멍 및 시퀀스 번호를 보낸 ACKed 넘어 다음 패킷 가리키도록 가정 합니다. 전송 버퍼 진행 때마다 타임 아웃 타이머 다시 설정 하기 때문에 큰 구멍 또는 시퀀스 공간-TCP 자루 처럼 여러 개의 구멍을 채우기 위해 새로운 리노 수 있습니다. 새로운 리노는 빠른 복구 동안 혼잡 창의 끝에 새로운 패킷을 보낼 수 있습니다, 때문에 여러 패킷 여러 구멍이 경우에 높은 처리량 구멍 채우기 프로세스 동안 유지 됩니다. TCP 입력 빠른 복구 높은 뛰어난 승인된 패킷 시퀀스 번호를 기록 합니다. 이 시퀀스 번호를 승인 하는 경우 TCP 혼잡 회피 상태로 돌아갑니다. 문제가 없는 패킷 손실을 있지만 패킷 3 이상의 패킷 시퀀스 번호로 추가 주문 하는 대신, 새로운 리노와 함께 발생 합니다. 이것이 일어날 때, 새로운 리노 실수로 빠른 복구를 입력 하지만 재정렬된 패킷이 전달 될 때 ACK 순서 수 진도 발생 하 고 거기에서 빠른 복구의 끝까지, 시퀀스 번호 진행의 모든 비트는 즉시 ACKed 중복 및 불필요 한 재전송 생산. 새로운 리노 낮은 패킷 에러율에 자루 뿐만 아니라 수행 하 고 내용이 풍부 하 게 높은 오류율에 리노를 능가.</item>
+    <item>TCP Hybla 대기 지상파 나 위성 라디오 링크, 그들의 더 긴 왕복 여행 시간 때문에 통합 하는 TCP 연결의 형벌을 제거 하는 것을 목표로 합니다. 그것은 RTT의 성능 의존도 제거 하는 데 필요한 수정 제안 혼잡 창 역동성의 분석 평가에서 유래한 다.</item>
+    <item>이진 증가 혼잡 제어 (RFC 1072 LFN, 긴 뚱뚱한 네트워크 라고) 높은 대기 시간으로 고속 네트워크의 최적화 된 혼잡 제어 알고리즘을 사용한 TCP의 구현입니다. BIC는 리눅스 커널 2.6.18 통해 2.6.8에서에서 기본적으로 사용 됩니다.</item>
+    <item>입방 전에 이벤트 창에 설정 굴절 포인트 있는 창이 마지막 혼잡 이벤트부터 시간의 입방 기능입니다의 BIC의 덜 공격적이 고 더 체계적인 파생이입니다. 큐빅 버전 2.6.19부터 리눅스 커널에 기본적으로 사용 됩니다.</item>
+    <item>TCP 웨스트 우드 (TCPW)은 더 나은 원하는 핸들 큰 대역폭 지연 제품 경로 (큰 파이프) TCP 새로운 리노로 보낸 쪽만 수정, 전송 또는 기타 오류 (새는 파이프), 패킷 손실 가능성 및 동적 로드 (동적 파이프). 더 혼잡 제어 매개 변수를 설정할 수 있도록 정보에 대 한 ACK 스트림의 광업에 의존 하는 TCP 웨스트우드: 느린 시작 임계값 (ssthresh), 및 혼잡 창 (cwin). TCP 웨스트우드 \"규정 요금\" 추정 및 ssthresh 및 cwin 손실 표시, 또는 그것의 \"민첩 한 프로 빙\" 단계 동안, 잘 알려진 느린 시작 단계에 제안 된 수정 업데이트를 보낸 사람에 의해 사용 합니다. 또한, 지속적인 비 혼잡 탐지 (PNCD) 라는 제도 혼잡의 지속적인 부족을 감지 하 여 신속 하 게 큰 동적 대역폭을 활용 하는 민첩 한 조사 단계 유도 고안 되었습니다.</item>
+    <item>확장 가능한 TCP 혼잡 제어 알고리즘을 수정합니다. 혼잡 윈도우 크기를 이등분 하는 대신 각 패킷 손실이 극히 일부에 의해 혼잡 창을 감소 (표준 TCP 대신 1/8의 1/2) 패킷 손실 중지까지. 속도 느린 고정 비율로 ramped 패킷 손실 중지 하는 경우 (하나의 패킷을 모든 백 성공 승인에 대 한 추가) 혼잡 윈도우 크기의 반비례 표준 TCP 속도 대신 (따라서 매우 큰 windows 복구 시간이 오래 걸릴). 이렇게 하면 4 + 시간 (표준 TCP를 사용 하 여)에서 10 Gbit 링크 복구 시간을 줄일 때 왕복 시간은 200 밀리초 15 초 미만.</item>
+    <item>H TCP는 TCP의 혼잡 창 제어 첨가제-곱셈-늘리거나 (AIMD)를 사용 하 여 손실 기반 알고리즘입니다. 그것은 작은 BDP 경로 대 한 \"TCP 친절\"을 유지 하면서 높은 대역폭 지연 제품 (BDP) 경로에 TCP의 적극성을 증가 하고자 하는 많은 TCP 혼잡 회피 알고리즘 중 하나입니다. H-TCP 이전 손실 증가 때문에 시간으로 (특히 첨가제 증가 속도)에 있는 그것의 적극성을 증가 시킵니다. 이 HSTCP 및 그들의 창을 큰 이미 경우 공격적인 흐름을 만드는 BIC TCP에 의해 발생 하는 문제를 방지 합니다. 따라서, 새로운 흐름 공정 HTCP에서 HSTCP와 BIC TCP 보다 빠른 수렴을 기대할 수 있습니다.</item>
   </string-array>
   <string-array name="glo_vm_titles">
-    <item>Dirty Ratio</item>
-    <item>Dirty Background Ratio</item>
-    <item>Dirty Expire Centisecs</item>
-    <item>Dirty Writeback centisecs</item>
-    <item>Overcommit Ratio</item>
+    <item>더러운 비율</item>
+    <item>더러운 배경 비율</item>
+    <item>더러운 Centisecs 만료</item>
+    <item>더러운 쓰기 저장 centisecs</item>
+    <item>비율 떨어지므로</item>
     <item>Swappiness</item>
-    <item>VFS Cache Pressure</item>
+    <item>VFS 캐시 압력</item>
   </string-array>
   <string-array name="glo_vm_descs">
-    <item>Contains, as a percentage of total available memory that contains free pages
-and reclaimable pages, the number of pages at which a process which is
-generating disk writes will itself start writing out dirty data.
-The total avaiable memory is not equal to total system memory.</item>
-    <item>Contains, as a percentage of total available memory that contains free pages
-and reclaimable pages, the number of pages at which the background kernel
-flusher threads will start writing out dirty data.
-The total avaiable memory is not equal to total system memory.</item>
-    <item>This tunable is used to define when dirty data is old enough to be eligible
-for writeout by the kernel flusher threads.  It is expressed in 100\'ths
-of a second.  Data which has been dirty in-memory for longer than this
-interval will be written out next time a flusher thread wakes up.</item>
-    <item>The kernel flusher threads will periodically wake up and write `old\' data
-out to disk.  This tunable expresses the interval between those wakeups, in
-100\'ths of a second.</item>
-    <item>The kernel flusher threads will periodically wake up and write `old\' data
-out to disk.  This tunable expresses the interval between those wakeups, in
-100\'ths of a second.</item>
-    <item>This control is used to define how aggressive the kernel will swap
-memory pages.  Higher values will increase agressiveness, lower values
-decrease the amount of swap.
-The default value is 60.</item>
-    <item>Controls the tendency of the kernel to reclaim the memory which is used for
-caching of directory and inode objects.
-At the default value of vfs_cache_pressure=100 the kernel will attempt to
-reclaim dentries and inodes at a \"fair\" rate with respect to pagecache and
-swapcache reclaim.  Decreasing vfs_cache_pressure causes the kernel to prefer
-to retain dentry and inode caches. When vfs_cache_pressure=0, the kernel will
-never reclaim dentries and inodes due to memory pressure and this can easily
-lead to out-of-memory conditions. Increasing vfs_cache_pressure beyond 100
-causes the kernel to prefer to reclaim dentries and inodes.</item>
+    <item>무료 페이지와 reclaimable 페이지를 포함 하는 총 사용 가능한 메모리의 비율로 들어 있는 디스크를 생성 하는 과정 자체가 더러운 데이터를 쓰기 시작할 것 이다 기록 페이지 수. 총 avaiable 메모리는 총 시스템 메모리와 같습니다.</item>
+    <item>무료 페이지와 reclaimable 페이지를 포함 하는 총 사용 가능한 메모리의 비율로 포함 되어 있는 배경 커널 flusher 스레드 더러운 데이터 쓰기 시작 됩니다 페이지 수. 총 avaiable 메모리는 총 시스템 메모리와 같습니다.</item>
+    <item>이 조정할 수 있는 데 사용 됩니다 때 커밋되지 않은 데이터 writeout에 적격이 기 위하여 충분히 오래 된가 정의 커널 flusher 스레드.  그것은 두 번째의 ths 100\' 표현 된다.  더러운 메모리가이 간격 보다 더 오랫동안 되었습니다 데이터 flusher 스레드를 깨운 다음에 기록 됩니다.</item>
+    <item>커널 flusher 스레드 주기적으로 일어나 고 디스크에를 \'오래 된\' 데이터를 씁니다.  이 가변 표현 100\' 두 번째 ths에 그 wakeups 사이의 간격.</item>
+    <item>커널 flusher 스레드 주기적으로 일어나 고 디스크에를 \'오래 된\' 데이터를 씁니다.  이 가변 표현 100\' 두 번째 ths에 그 wakeups 사이의 간격.</item>
+    <item>이 컨트롤 어떻게 공격적 커널 메모리 페이지 스왑 것입니다 정의 하는 데 사용 됩니다.  값이 높을수록 agressiveness 증가, 낮은 값 스왑의 양을 감소. 기본값은 60입니다.</item>
+    <item>제어 경향이 커널 디렉토리 및 inode 개체의 캐시에 사용 되는 메모리를 회수 합니다. Vfs_cache_pressure의 기본값 = 100 커널 dentries를 되 찾기 위해 시도 합니다 및 inode pagecache 및 swapcache \"공정한\" 속도로 회수.  Vfs_cache_pressure 감소 dentry를 유지 하는 것을 선호 하는 커널 원인과 inode 캐시 합니다. 때 vfs_cache_pressure = 0, 커널 지 절대 확보 dentries 및 메모리 압력 및이 inode 쉽게 메모리 부족 조건으로 이어질. 증가 100 넘어 vfs_cache_pressure dentries 및 inode를 되 찾기 위해 선호 하는 커널을 발생 합니다.</item>
   </string-array>
   <string-array name="glo_lmk_titles">
     <item>Low Memory Killer</item>
   </string-array>
   <string-array name="glo_lmk_descs">
-    <item>When your phone boots up, a file inside the boot image (init.rc) sets the system parameters.  Things like the path to framework files, setting up your networks, and setting the limits at which programs are killed off to free RAM are done by this file. The killing parameters are knows as Low Memory Killer Parameters</item>
+    <item>휴대폰 부팅, 부팅 이미지 (init.rc) 내부 파일 시스템 매개 변수를 설정 합니다.  프레임 워크 파일 경로 같은 것 들, 당신의 네트워크를 설정 하 고 있는 프로그램 종료 되면서 RAM을 무료로 제한 설정이 파일에서 수행 됩니다. 매개 변수는 살인 로우 메모리 킬러 매개 변수로 알으십시오</item>
   </string-array>
-  <string name="mt_refresh">Refresh</string>
+  <string name="mt_refresh">새로고침</string>
   <string name="mt_app_settings">"앱 설정"</string>
   <string name="mt_reset">초기화</string>
-  <string name="mt_restore">Restore</string>
-  <string name="mt_plus25">Increase by 25 mV</string>
-  <string name="mt_minus25">Decrease by 25 mV</string>
-  <string name="current_speed">Current Speed</string>
-  <string name="current_max">Maximum speed: </string>
-  <string name="current_min">Minimum speed: </string>
+  <string name="mt_restore">복원</string>
+  <string name="mt_plus25">25 만큼 늘려 mV</string>
+  <string name="mt_minus25">25 감소 mV</string>
+  <string name="current_speed">현재 속도</string>
+  <string name="current_max">최대 속도: </string>
+  <string name="current_min">최소 속도: </string>
   <string name="governor">가버너</string>
-  <string name="io">I/O Scheduler</string>
-  <string name="sob">Apply automatically on boot</string>
+  <string name="io">I/O 스케줄러</string>
+  <string name="sob">부팅 시에 자동으로 적용</string>
   <string name="ok">예</string>
-  <string name="cancel">Cancel</string>
-  <string name="cpu_info_list_header">Core Status</string>
-  <string name="cpu_speed_header">Core Limits</string>
-  <string name="other_settings_header">Other settings</string>
-  <string name="core_offline">Offline</string>
-  <string name="core">Core</string>
-  <string name="prefcat_free_memory">FREE MEMORY</string>
-  <string name="prefcat_tweaks">FAST CHARGE</string>
-  <string name="prefcat_misc_short">MISC</string>
-  <string name="prefcat_read_ahead">SD READ AHEAD</string>
-  <string name="prefcat_vm_settings">DALVIK SETTINGS</string>
+  <string name="cancel">취소</string>
+  <string name="cpu_info_list_header">코어 상태</string>
+  <string name="cpu_speed_header">코어 한계</string>
+  <string name="other_settings_header">기타 설정</string>
+  <string name="core_offline">오프라인</string>
+  <string name="core">코어</string>
+  <string name="prefcat_free_memory">무료 메모리</string>
+  <string name="prefcat_tweaks">빠른 충전</string>
+  <string name="prefcat_misc_short">기타</string>
+  <string name="prefcat_read_ahead">SD 미리 읽기</string>
+  <string name="prefcat_vm_settings">DALVIK 설정</string>
   <string name="dt_free_memory">Minfree Taskkiller</string>
-  <string name="dt_read_ahead">SD Read Ahead</string>
-  <string name="pt_free_memory">Free memory</string>
-  <string name="ps_free_memory">Amount of RAM the minfree taskkiller will keep |
-        Current: %s</string>
-  <string name="ps_free_memory_boot">Apply the amount above at boot</string>
-  <string name="pt_read_ahead">Storage read ahead</string>
-  <string name="ps_read_ahead">Amount to read ahead on storage, in kb |
-        Current: %s</string>
-  <string name="ps_fast_charge_boot">Fast charge</string>
-  <string name="fast_charge_warning">YOU WILL NOT BE ABLE TO CONNECT TO YOUR PC AFTER
-        EACH REBOOT!\n\nWhile Fast Charge is ON, you can *only* charge your phone!</string>
-  <string name="fast_charge_notification_title">Fast Charge is ON!</string>
-  <string name="fast_charge_notification_message">Phone is in charge-only mode!</string>
-  <string name="prefcat_oom">MINIMUM FREE MEMORY</string>
-  <string name="title_foreground_app">Foreground applications</string>
-  <string name="title_visible_app">Visible Applications</string>
-  <string name="title_secondary_server">Secondary Server</string>
-  <string name="title_hidden_app">Hidden Applications</string>
-  <string name="title_content_providers">Content Providers</string>
-  <string name="title_empty_app">Empty Applications</string>
+  <string name="dt_read_ahead">SD 미리 읽기</string>
+  <string name="pt_free_memory">무료 메모리</string>
+  <string name="ps_free_memory">Ram minfree taskkiller 유지 됩니다 |         현재: %s</string>
+  <string name="ps_free_memory_boot">부팅 시 위의 금액을 적용</string>
+  <string name="pt_read_ahead">미리 읽기 저장</string>
+  <string name="ps_read_ahead">금액은 kb에서 스토리지에 미리 읽기 |         현재: %s</string>
+  <string name="ps_fast_charge_boot">고속충전</string>
+  <string name="fast_charge_warning">하지 않을 것 이다 수 수에 연결에 당신의 PC 후 각각 재부팅! \n\nWhile 빠른 충전에, 당신은 수 *만 * 귀하의 휴대 전화 충전!</string>
+  <string name="fast_charge_notification_title">빠른 충전 ON입니다.</string>
+  <string name="fast_charge_notification_message">전화는 충전 전용 모드에서입니다!</string>
+  <string name="prefcat_oom">최소 메모리</string>
+  <string name="title_foreground_app">포그라운드 응용 프로그램</string>
+  <string name="title_visible_app">표시 응용 프로그램</string>
+  <string name="title_secondary_server">보조 서버</string>
+  <string name="title_hidden_app">숨겨진된 응용 프로그램</string>
+  <string name="title_content_providers">콘텐츠 공급자</string>
+  <string name="title_empty_app">빈 응용 프로그램</string>
   <string name="prefcat_oom_predefines">프리셋</string>
-  <string name="pt_oom">Minfree Taskkiller Presets</string>
-  <string name="pt_verylight">Very Light (Kills rarely)</string>
+  <string name="pt_oom">Minfree Taskkiller 프리셋</string>
+  <string name="pt_verylight">아주 라이트 (죽이기 거의)</string>
   <string name="pt_light">얇게</string>
   <string name="pt_medium">중간</string>
-  <string name="pt_aggressive">Aggressive</string>
-  <string name="pt_veryaggressive">Very Aggressive (Kills often)</string>
-  <string name="prefcat_user_proc">NOT KILLABLE USER PROCESSES</string>
-  <string name="prefcat_sys_proc">NOT KILLABLE SYSTEM PROCESSES</string>
-  <string name="pt_user_proc">Enable not killable user processes</string>
-  <string name="pt_sys_proc">Enable not killable system processes</string>
-  <string name="pt_user_names_proc">User Processes whitelist</string>
-  <string name="pt_sys_names_proc">System Processes whitelist</string>
-  <string name="ps_restore_boot">Restore above settings at boot</string>
-  <string name="ps_user_proc">The list of user process names (comma separated)</string>
-  <string name="ps_sys_proc">The list of system process names (comma separated)</string>
-  <string name="no_proc">No packages</string>
-  <string name="prefcat_bln">BACKLIGHT NOTIFICATION</string>
-  <string name="pt_bln">Backlight Notification</string>
-  <string name="blx_info">Battery Life eXtender feature\nAuthor Ezekeel</string>
-  <string name="prefcat_blx">BATTERY LIFE EXTENDER</string>
+  <string name="pt_aggressive">공격적</string>
+  <string name="pt_veryaggressive">아주 공격적 (종종 살인)</string>
+  <string name="prefcat_user_proc">안 속여 사용자 프로세스</string>
+  <string name="prefcat_sys_proc">안 속여 시스템 프로세스</string>
+  <string name="pt_user_proc">안 속여 사용자 프로세스 활성화</string>
+  <string name="pt_sys_proc">안 속여 시스템 프로세스 활성화</string>
+  <string name="pt_user_names_proc">사용자 프로세스 허용</string>
+  <string name="pt_sys_names_proc">시스템 프로세스 허용</string>
+  <string name="ps_restore_boot">부팅시 설정 위에 복원</string>
+  <string name="ps_user_proc">사용자 프로세스 이름 (쉼표로 구분)의 목록</string>
+  <string name="ps_sys_proc">사용자 프로세스 이름 (쉼표로 구분)의 목록</string>
+  <string name="no_proc">아니 패키지 않습니다</string>
+  <string name="prefcat_bln">백라이트 알림</string>
+  <string name="pt_bln">백라이트 알림</string>
+  <string name="blx_info">배터리 증 량 제 feature\nAuthor Ezekeel</string>
+  <string name="prefcat_blx">배터리 수명 익스텐더</string>
   <string name="pt_blx_boot">부팅시 설정</string>
-  <string name="ps_blx_boot">Apply the amount above at boot</string>
-  <string name="blx_title">Charge limit:</string>
-  <string name="dsync_info">Dynamic FSync feature\nAuthor Paul Reioux (faux123)</string>
-  <string name="prefcat_dsync">DYNAMIC FSYNC</string>
-  <string name="ps_dsync">Setting will be restored on reboot</string>
-  <string name="pt_dsync">Dynamic Fsync</string>
-  <string name="prefcat_bltimeout">BACKLIGHT TIMEOUT</string>
+  <string name="ps_blx_boot">부팅 시 위의 금액을 적용</string>
+  <string name="blx_title">충전 한도:</string>
+  <string name="dsync_info">동적 FSync feature\nAuthor Paul Reioux (faux123)</string>
+  <string name="prefcat_dsync">동적 FSYNC</string>
+  <string name="ps_dsync">설정 재 부 팅에 복원 됩니다.</string>
+  <string name="pt_dsync">동적 Fsync</string>
+  <string name="prefcat_bltimeout">백라이트 시간 제한</string>
   <string name="ps_bltimeout">%s ms</string>
-  <string name="bltimeout_title">Backlight timeout</string>
-  <string name="prefcat_bltouch">BACKLIGHT ON TOUCHSCREEN</string>
-  <string name="pt_bltouch">Backlight on touchscreen</string>
-  <string name="pfk_info">Phantom Key Presses Filter module ver. %s\nAuthor Cristoforo Cataldo (Christopher83)</string>
-  <string name="prefcat_pfk">PHANTOM KEY PRESSES FILTER</string>
-  <string name="pt_home_enabled">Home key filter</string>
-  <string name="ps_home_enabled">Ignored key pressed: %s</string>
-  <string name="home_allowed_irq_title">Max allowed interrupts</string>
-  <string name="home_report_wait_title">Report wait time</string>
-  <string name="pt_menuback_enabled">Menu/Back keys filter</string>
-  <string name="ps_menuback_enabled">Ignored key pressed: %s</string>
-  <string name="menuback_interrupt_checks_title">Interrupts checks</string>
-  <string name="menuback_first_err_wait_title">First error wait time</string>
-  <string name="menuback_last_err_wait_title">Last error wait time</string>
-  <string name="ps_pfk_set_on_boot">If enabled will restore all pkf settings on reboot</string>
-  <string name="dynamic_writeback_info">Dynamic Dirty Page Writebacks feature\nAuthor Cristoforo Cataldo (Christopher83)</string>
-  <string name="dynamic_write_back_title">DYNAMIC DIRTY PAGE WRITEBACKS</string>
-  <string name="pt_dynamic_write_back">Dynamic Dirty Writeback</string>
-  <string name="dynamic_writeback_active_title">Dirty Writeback Active centisecs</string>
-  <string name="dynamic_writeback_suspend_title">Dirty Writeback Suspend centisecs</string>
-  <string name="size_25_mb">25mb</string>
-  <string name="size_50_mb">50mb</string>
-  <string name="size_75_mb">75mb</string>
-  <string name="size_80_mb">80mb</string>
-  <string name="size_100_mb">100mb</string>
-  <string name="size_128_kb">128kb</string>
-  <string name="size_256_kb">256kb</string>
-  <string name="size_512_kb">512kb</string>
-  <string name="size_1024_kb">1024kb</string>
-  <string name="size_2048_kb">2048kb</string>
-  <string name="size_4096_kb">4096kb</string>
-  <string name="volt_info">ATTENTION!\nBefore activating Set on boot, make sure that the values ​​entered do not exceed limits or risk the phone to freeze.</string>
-  <string name="ps_volt_mhz_voltage">" Hz"</string>
-  <string name="ps_volt_save">"Save"</string>
-  <string name="ps_volt_current_voltage">"Current voltage: "</string>
-  <string name="ps_volt_setting_to_apply">"Setting to apply: "</string>
-  <string name="pt_volt_control">Voltage control</string>
-  <string name="ps_volt_control">Set voltages for each frequency</string>
-  <string name="apply_values">Apply values</string>
-  <string name="freq">Frequency</string>
-  <string name="current">mV current</string>
-  <string name="saved">mV saved</string>
-  <string name="not_supported">Your kernel does not support voltage control</string>
-  <string name="ps_vm_set_on_boot">If enabled will restore all vm settings on reboot</string>
-  <string name="dirty_ratio_title">Dirty ratio</string>
-  <string name="dirty_ratio_summary">A higher ratio means lower CPU but slower app startups</string>
-  <string name="dirty_background_title">Dirty background ratio</string>
-  <string name="dirty_expire_title">Dirty expire centisecs</string>
-  <string name="dirty_writeback_title">Dirty writeback centisecs</string>
+  <string name="bltimeout_title">백라이트 시간 제한</string>
+  <string name="prefcat_bltouch">터치 스크린 백라이트</string>
+  <string name="pt_bltouch">터치 스크린 백라이트</string>
+  <string name="pfk_info">팬텀 키 프레스 필터 모듈 ver. %s\nAuthor Cristoforo 카 탈도 (Christopher83)</string>
+  <string name="prefcat_pfk">팬텀 키 프레스 필터</string>
+  <string name="pt_home_enabled">홈 키 필터</string>
+  <string name="ps_home_enabled">무시 키: %s</string>
+  <string name="home_allowed_irq_title">최대 인터럽트 허용</string>
+  <string name="home_report_wait_title">보고서 대기 시간</string>
+  <string name="pt_menuback_enabled">메뉴/뒤로 키 필터</string>
+  <string name="ps_menuback_enabled">무시 키: %s</string>
+  <string name="menuback_interrupt_checks_title">인터럽트 확인</string>
+  <string name="menuback_first_err_wait_title">첫 번째 오류 대기 시간</string>
+  <string name="menuback_last_err_wait_title">마지막 오류 대기 시간</string>
+  <string name="ps_pfk_set_on_boot">윌을 사용 하는 경우 재 부 팅 모든 pkf 설정을 복원</string>
+  <string name="dynamic_writeback_info">동적 더러운 페이지 Writeback feature\nAuthor Cristoforo 카 탈도 (Christopher83)</string>
+  <string name="dynamic_write_back_title">동적 더러운 페이지 WRITEBACK</string>
+  <string name="pt_dynamic_write_back">동적 더러운 쓰기 저장</string>
+  <string name="dynamic_writeback_active_title">더러운 쓰기 저장 액티브 centisecs</string>
+  <string name="dynamic_writeback_suspend_title">더러운 쓰기 저장 일시 centisecs</string>
+  <string name="size_25_mb">25 mb</string>
+  <string name="size_50_mb">50 메가바이트</string>
+  <string name="size_75_mb">75 mb</string>
+  <string name="size_80_mb">80 mb</string>
+  <string name="size_100_mb">100 mb</string>
+  <string name="size_128_kb">128 kb</string>
+  <string name="size_256_kb">256 kb</string>
+  <string name="size_512_kb">512 kb</string>
+  <string name="size_1024_kb">1024 kb</string>
+  <string name="size_2048_kb">2048 kb</string>
+  <string name="size_4096_kb">4096 kb</string>
+  <string name="volt_info">주의! \nBefore 입력 값 한도 초과 하거나 동결 전화 위험 하지 않는 있는지 확인 하십시오 부팅, 집합을 활성화 합니다.</string>
+  <string name="ps_volt_mhz_voltage">"Hz"</string>
+  <string name="ps_volt_save">"저장"</string>
+  <string name="ps_volt_current_voltage">"현재 전압: "</string>
+  <string name="ps_volt_setting_to_apply">"설정을 적용 하려면: "</string>
+  <string name="pt_volt_control">전압 제어</string>
+  <string name="ps_volt_control">각 주파수에 대 한 설정된 전압</string>
+  <string name="apply_values">값을 적용</string>
+  <string name="freq">주파수</string>
+  <string name="current">현재 뮤직 비디오</string>
+  <string name="saved">뮤직 비디오 저장</string>
+  <string name="not_supported">커널 전압 제어를 지원 하지 않습니다.</string>
+  <string name="ps_vm_set_on_boot">윌을 사용 하는 경우 재 부 팅 모든 pkf 설정을 복원</string>
+  <string name="dirty_ratio_title">더러운 비율</string>
+  <string name="dirty_ratio_summary">
+A higher ratio means lower CPU but slower app startups</string>
+  <string name="dirty_background_title">더러운 배경 비율</string>
+  <string name="dirty_expire_title">더러운 Centisecs 만료</string>
+  <string name="dirty_writeback_title">더러운 쓰기 저장 centisecs</string>
   <string name="min_free_title">Minfree kbytes</string>
-  <string name="overcommit_title">Overcommit ratio</string>
+  <string name="overcommit_title">비율 떨어지므로</string>
   <string name="swappiness_title">Swappiness</string>
-  <string name="vfs_title">VFS cache pressure</string>
-  <string name="time_in_state">TIME IN STATE</string>
-  <string name="unused_cpu_states">UNUSED CPU STATES</string>
-  <string name="total_state_time">TOTAL STATE TIME</string>
-  <string name="no_states_file_found">No states file found. Are you sure your phone is
-        compatible?\n\nIf you are running a custom ROM or kernel, try
-        contacting its developer to inform him that the states file is not
-        readable.</string>
-  <string name="deep_sleep">"Deep Sleep"</string>
-  <string name="kernel_info">LINUX KERNEL INFORMATION</string>
-  <string name="cpu_info">CPU INFORMATION</string>
-  <string name="mem_info">MEMORY INFORMATION</string>
-  <string name="first_run_title">First check for root</string>
-  <string name="su_success_title">Success!</string>
-  <string name="su_failed_title">Oops!</string>
-  <string name="first_run_message">The application needs to check for root access and
-        busybox. Press OK to continue. Cancel if you would not like to grant
-        root access.</string>
-  <string name="su_success_message">Performance Control was able to get root access and
-        find busybox. Ready to rock!</string>
-  <string name="su_cancel_message">You have chosen to not check for root and busybox.
-        Most options will not work without root access. Sorry!</string>
-  <string name="su_failed_su_or_busybox">Root access failed or busybox was not found. Most
-        options will not work without root access. Sorry!</string>
-  <string name="prefcat_sh">CUSTOM SHELL COMMAND</string>
-  <string name="sh_title">Edit shell command</string>
-  <string name="ps_sh">Command will be executed at boot.</string>
-  <string name="sh_msg">Leave blank for no operation.</string>
-  <string name="clear">Clear</string>
-  <string name="yes">Yes</string>
-  <string name="wait">Please wait&#8230;</string>
-  <string name="prefcat_wipe_cache">CACHE and DALVIK CACHE</string>
-  <string name="wipe_cache_title">Wipe cache and dalvik cache</string>
-  <string name="ps_wipe_cache">Cache partition: %s</string>
-  <string name="wipe_cache_msg">At the end, the system will reboot. Continue?</string>
-  <string name="prefcat_flash_img">FLASH IMG FILE</string>
-  <string name="kernel_img_title">Flash KERNEL</string>
-  <string name="ps_kernel_img">Flash boot.img files as kernel. Can choose individual boot.img file or any zip file that contains boot.img</string>
-  <string name="recovery_img_title">Flash RECOVERY</string>
-  <string name="ps_recovery_img">Flash recovery.img files as recovery. Can choose individual recovery.img file or any zip file that contains recovery.img</string>
-  <string name="btn_choose">Choose %s</string>
-  <string name="unsupported_info">Your device is not supported.</string>
-  <string name="flash_info">will be flashed on partition\n%s\n as</string>
-  <string name="dir_parent">&lt;Parent DIR&gt;</string>
-  <string name="dir">&lt;DIR&gt;</string>
-  <string name="bkexit">Press again to exit</string>
-  <string name="prefcat_residual_files">CLEAN RESIDUAL FILES</string>
-  <string name="residual_files_title">Clean residual files</string>
-  <string name="btncleanall">Clean all</string>
-  <string name="clean_files_msg">Residual files from %s will be deleted. Continue?</string>
-  <string name="filesstr">file(s)</string>
-  <string name="no_residuals">No residual files</string>
-  <string name="prefcat_optim_db">OPTIMIZE DBs</string>
-  <string name="optim_db_title">Optimize Databases</string>
-  <string name="ps_optim_db">This will optimize databases by using SQL command VACUUM.</string>
+  <string name="vfs_title">VFS 캐시 압력</string>
+  <string name="time_in_state">상태인 시간</string>
+  <string name="unused_cpu_states">사용 되지 않는 CPU 상태</string>
+  <string name="total_state_time">총 국가 시간</string>
+  <string name="no_states_file_found">상태 파일을 찾을 수 없습니다. 귀하의 휴대 전화 호환 되 시겠습니까? \n\nIf 사용자 지정 ROM 또는 커널을 실행 하는 그 국가 파일은 읽을 수 있는 게 그것의 개발자에 게 연락 하려고.</string>
+  <string name="deep_sleep">"깊은 잠"</string>
+  <string name="kernel_info">리눅스 커널 정보</string>
+  <string name="cpu_info">CPU 정보</string>
+  <string name="mem_info">메모리 정보</string>
+  <string name="first_run_title">루트 첫 확인</string>
+  <string name="su_success_title">성공!</string>
+  <string name="su_failed_title">이런!</string>
+  <string name="first_run_message">응용 프로그램 루트 액세스와 busybox를 확인 해야 합니다. 보도 확인을 계속 합니다. 루트 액세스를 부여 하려는 않을 경우 취소.</string>
+  <string name="su_success_message">성능 제어 busybox를 찾아서 루트 액세스를 얻을 수 있었다. 바위에 준비!</string>
+  <string name="su_cancel_message">루트와 busybox 검사 안 하기로 했습니다.         대부분의 옵션은 루트 액세스 하지 않고 작동 하지 않습니다. 죄송 합니다!</string>
+  <string name="su_failed_su_or_busybox">루트 액세스 실패 또는 busybox를 찾을 수 없습니다. 대부분의 옵션은 루트 액세스 하지 않고 작동 하지 않습니다. 죄송 합니다!</string>
+  <string name="prefcat_sh">사용자 지정 셸 명령</string>
+  <string name="sh_title">셸 명령 편집</string>
+  <string name="ps_sh">명령은 부팅 시 실행 됩니다.</string>
+  <string name="sh_msg">없음 작업에 대 한 비워 둡니다.</string>
+  <string name="clear">제거</string>
+  <string name="yes">예</string>
+  <string name="wait">잠시 기다리십시오...</string>
+  <string name="prefcat_wipe_cache">캐시와 DALVIK 캐시</string>
+  <string name="wipe_cache_title">캐시와 dalvik 캐시 지우기</string>
+  <string name="ps_wipe_cache">캐시 파티션: %s</string>
+  <string name="wipe_cache_msg">끝에서 시스템이 재부팅 됩니다. 계속 하 시겠습니까?</string>
+  <string name="prefcat_flash_img">IMG 파일을 플래시</string>
+  <string name="kernel_img_title">플래시 커널</string>
+  <string name="ps_kernel_img">커널으로 boot.img 파일을 플래시. 개별 boot.img 파일 또는 boot.img 포함 된 zip 파일을 선택할 수 있습니다.</string>
+  <string name="recovery_img_title">플래시 리커버리</string>
+  <string name="ps_recovery_img">리커버리 이미지를 선택하여 개별또는 개인 zip를 포함된 zip를 설치할수 있습니다.</string>
+  <string name="btn_choose">%s 선택</string>
+  <string name="unsupported_info">장치가 지원 되지 않습니다.</string>
+  <string name="flash_info">로 partition\n%s\n에 번쩍</string>
+  <string name="dir_parent">&lt; 부모 DIR &gt;</string>
+  <string name="dir">&lt; DIR &gt;</string>
+  <string name="bkexit">한 번 더 누르면 종료됩니다.</string>
+  <string name="prefcat_residual_files">잔여 파일 청소</string>
+  <string name="residual_files_title">깨끗 한 잔여 파일</string>
+  <string name="btncleanall">모든 청소</string>
+  <string name="clean_files_msg">잔여 파일 %s 삭제 됩니다. 계속 하 시겠습니까?</string>
+  <string name="filesstr">파일 (들)</string>
+  <string name="no_residuals">잔여 파일 없음</string>
+  <string name="prefcat_optim_db">DBs를 최적화</string>
+  <string name="optim_db_title">데이터베이스 최적화</string>
+  <string name="ps_optim_db">이 SQL 명령을 진공을 사용 하 여 데이터베이스를 최적화 합니다.</string>
   <string-array name="residual_info">
-    <item>Contains Android system log files</item>
-    <item>Contains log files from crashed apps</item>
-    <item>Contains constantly generated log files</item>
-    <item>Contains statistics about what apps you started</item>
-    <item>Contains traces from \'application not responding\' events</item>
-    <item>Contains temporary files</item>
+    <item>안 드 로이드 시스템 로그 파일을 포함</item>
+    <item>추락된 애플 리 케이 션에서 로그 파일을 포함</item>
+    <item>끊임없이 생성 되는 로그 파일을 포함</item>
+    <item>어떤 애플 리 케이 션을 시작에 대 한 통계를 포함</item>
+    <item>\'응용 프로그램 응답 하지\' 이벤트에서 추적 포함</item>
+    <item>임시 파일 포함</item>
   </string-array>
-  <string name="prefcat_fix_perms">FIX PERMISSIONS</string>
-  <string name="fix_perms_title">Fix permissions</string>
-  <string name="fix_perms_msg">Operation may take several minutes. Continue?</string>
-  <string name="preflogg_fix_perms">Enable logging</string>
-  <string name="free">free %s</string>
-  <string name="used">used %s</string>
-  <string name="verify">Verifying&#8230;</string>
-  <string name="bad_zip">%s not found in zip file !</string>
+  <string name="prefcat_fix_perms">사용 권한 수정</string>
+  <string name="fix_perms_title">사용 권한 수정</string>
+  <string name="fix_perms_msg">작업은 몇 분 정도 걸릴 수 있습니다. 계속 하 시겠습니까?</string>
+  <string name="preflogg_fix_perms">로그 사용</string>
+  <string name="free">%s 무료</string>
+  <string name="used">%s 사용된</string>
+  <string name="verify">확인...</string>
+  <string name="bad_zip">%s 파일에서 찾을 수 없습니다!</string>
   <string name="closebtn">닫기</string>
-  <string name="delallbtn">Delete all</string>
-  <string name="del_file_msg">%s will be deleted. Continue?</string>
+  <string name="delallbtn">일괄 삭제</string>
+  <string name="del_file_msg">%s 삭제 됩니다. 계속 하 시겠습니까?</string>
   <string-array name="batt_status">
     <item>알 수 없음</item>
     <item>알 수 없음</item>
-    <item>Charging</item>
-    <item>Discharging</item>
-    <item>Full</item>
-    <item>Not charging</item>
+    <item>충전중</item>
+    <item>방전 중</item>
+    <item>완충됨</item>
+    <item>충전 중 아님</item>
   </string-array>
-  <string name="prefcat_ksm">KERNEL SAMEPAGE MERGING</string>
-  <string name="pt_run_ksm">Enable KSM</string>
+  <string name="prefcat_ksm">커널 SAMEPAGE 병합</string>
+  <string name="pt_run_ksm">KSM을 사용</string>
   <string name="ksm_adv_title">설정</string>
-  <string name="ksm_fullscans">Full Scans:</string>
-  <string name="ksm_pagshared">Pages Shared:</string>
-  <string name="ksm_pagsharing">Pages Sharing:</string>
-  <string name="ksm_pagunshared">Pages Unshared:</string>
-  <string name="ksm_pagvolatile">Pages Volatile:</string>
-  <string name="ksm_pagtoscan">Pages to Scan:</string>
-  <string name="ksm_sleep">Sleep (ms):</string>
-  <string name="prefcat_freezer">FREEZE or DEFROST PACKAGES</string>
-  <string name="pt_freeze">Freeze Package</string>
-  <string name="pt_unfreeze">Defrost Package</string>
-  <string name="ps_freeze">List of all installed packages</string>
-  <string name="ps_unfreeze">List of frozen packages</string>
-  <string name="mt_system_packs">System Packages</string>
-  <string name="mt_user_packs">User Packages</string>
-  <string name="freeze_msg">%s will be frozen. Continue?</string>
-  <string name="unfreeze_msg">%s will be defrosted. Continue?</string>
+  <string name="ksm_fullscans">전체 검색:</string>
+  <string name="ksm_pagshared">페이지 공유:</string>
+  <string name="ksm_pagsharing">페이지 공유:</string>
+  <string name="ksm_pagunshared">페이지 공유:</string>
+  <string name="ksm_pagvolatile">페이지 휘발성:</string>
+  <string name="ksm_pagtoscan">검색 페이지:</string>
+  <string name="ksm_sleep">수 면 (ms):</string>
+  <string name="prefcat_freezer">동결 또는 서 리 없애다 패키지</string>
+  <string name="pt_freeze">패키지를 동결</string>
+  <string name="pt_unfreeze">패키지를 녹 인 다</string>
+  <string name="ps_freeze">모든 설치 된 패키지의 목록</string>
+  <string name="ps_unfreeze">냉동된 패키지의 목록</string>
+  <string name="mt_system_packs">시스템 패키지</string>
+  <string name="mt_user_packs">사용자 패키지</string>
+  <string name="freeze_msg">%s 동결 됩니다. 계속 하 시겠습니까?</string>
+  <string name="unfreeze_msg">%s 녹여 것입니다. 계속 하 시겠습니까?</string>
   <string name="prefcat_zram">zRAM</string>
-  <string name="pt_run_zram">Enable zRam</string>
+  <string name="pt_run_zram">ZRam 사용</string>
   <string name="zram_set_title">설정</string>
-  <string name="ps_zram">Compress memory for increased virtual capacity</string>
-  <string name="mt_gov_ctrl">Governor Settings</string>
-  <string name="pt_use_light_theme">Use light theme</string>
-  <string name="ps_use_light_theme">If checked, Performance Control will use a Holo light theme</string>
-  <string name="pt_widget_bg_color">Widget bg color</string>
-  <string name="pt_widget_text_color">Widget text color</string>
-  <string name="pt_ver">"Version - "</string>
+  <string name="ps_zram">가상 용량 증가 대 한 메모리 압축</string>
+  <string name="mt_gov_ctrl">가버너 설정</string>
+  <string name="pt_use_light_theme">사용 빛 테마</string>
+  <string name="ps_use_light_theme">성능 제어 홀로 빛 테마를 사용 합니다를 선택</string>
+  <string name="pt_widget_bg_color">위젯 bg 색상</string>
+  <string name="pt_widget_text_color">위젯 텍스트 색상</string>
+  <string name="pt_ver">"버전- "</string>
   <string name="dialog_color_picker">색상 선택</string>
-  <string name="press_color_to_apply">Press on Color to apply</string>
+  <string name="press_color_to_apply">색상을 선택하여 적용합니다.</string>
   <string name="arrow_right">→</string>
   <string name="arrow_down">↓</string>
   <string name="hex">헥스:</string>
   <string name="hex_hint">#FF000000</string>
   <string name="set">설정</string>
-  <string name="ics_color">Holo</string>
-  <string name="navigation_drawer_toggle">Toggle Drawer</string>
-  <string name="navigation_drawer_open">Open navigation drawer</string>
-  <string name="navigation_drawer_close">Close navigation drawer</string>
-  <string name="navigation_toggle_drawer">Switch to Drawer</string>
-  <string name="navigation_toggle_tabbed">Switch to Tabbed</string>
-  <string name="performance_settings_warning_title">Proceed with Caution</string>
+  <string name="ics_color">기본</string>
+  <string name="navigation_drawer_toggle">토글 서랍</string>
+  <string name="navigation_drawer_open">네비게이션 서랍 열기</string>
+  <string name="navigation_drawer_close">네비게이션 드로워 닫기</string>
+  <string name="navigation_toggle_drawer">서랍으로 전환</string>
+  <string name="navigation_toggle_tabbed">전환 탭</string>
+  <string name="performance_settings_warning_title">확인하고 진행</string>
   <string name="performance_settings_warning_header">경고</string>
-  <string name="propmodder_title">Build.prop Mods</string>
-  <string name="propmodder_switches">Switches</string>
-  <string name="buildprop_title">build.prop mods (reboot required)</string>
-  <string name="buildprop_settings_warning">These settings are for experimentation and any changes made to them have the potential to cause instability, crashes, data loss or hardware failures.</string>
-  <string name="nonprop_cat_title">Mods involving init.d script</string>
-  <string name="pref_wifi_scan_interval_title">Wifi scan interval</string>
-  <string name="pref_wifi_scan_interval_summary">The time between wifi scans when no stored access points are available</string>
-  <string name="pref_wifi_scan_alt_summary">Time between wifi scans: %s</string>
-  <string name="pref_max_events_title">Windows Manager\'s max events per second</string>
-  <string name="pref_max_events_summary">This is a runtime value that controls the number of events the system will allow in a second</string>
-  <string name="pref_max_events_alt_summary">Max number of system events: %s</string>
-  <string name="pref_ring_delay_title">Telephone ringer delay</string>
-  <string name="pref_ring_delay_summary">The amount of time from when the system registers an incoming phone call until the ringer</string>
-  <string name="pref_ring_delay_alt_summary">Incoming call Delay: %s</string>
-  <string name="pref_vm_heapsize_title">Dalvik cache heapsize</string>
-  <string name="pref_vm_heapsize_summary">This controls the size of the cache the Dalvik VM has access to</string>
-  <string name="pref_vm_heapsize_alt_summary">Dalvik VM cache size: %s</string>
-  <string name="showbuild_title">Show The Build.Prop</string>
-  <string name="buildprop_summary">Find out whats in there</string>
-  <string name="showbuild_dialog">Displaying /system/Build.Prop</string>
-  <string name="showbuild_loading">Loading build.prop\u2026</string>
-  <string name="showbuild_error">Error loading build.prop\u2026</string>
+  <string name="propmodder_title">Build.prop 모드</string>
+  <string name="propmodder_switches">스위치</string>
+  <string name="buildprop_title">build.prop 모드 (재부팅 필요)</string>
+  <string name="buildprop_settings_warning">이러한 설정은 실험 이며 그들에 게 변경한 불안정, 충돌, 데이터 손실 또는 하드웨어 오류를 일으킬 가능성이 있다.</string>
+  <string name="nonprop_cat_title">모드 init.d 스크립트 포함</string>
+  <string name="pref_wifi_scan_interval_title">Wifi 스캔 간격</string>
+  <string name="pref_wifi_scan_interval_summary">Wifi 스캔 저장 된 액세스 지점이 없는 사용할 수 있을 때 사이의 시간</string>
+  <string name="pref_wifi_scan_alt_summary">Wifi 스캔 사이의 시간: %s</string>
+  <string name="pref_max_events_title">윈도우 관리자의 초당 최대 이벤트</string>
+  <string name="pref_max_events_summary">이것은 시스템에서 두 번째 수 이벤트 수를 제어 하는 런타임 값</string>
+  <string name="pref_max_events_alt_summary">시스템 이벤트 최대 개수: %s</string>
+  <string name="pref_ring_delay_title">전화 벨소리 지연</string>
+  <string name="pref_ring_delay_summary">시스템에서 수신 전화 벨소리까지 등록 하는 때에서 시간을</string>
+  <string name="pref_ring_delay_alt_summary">수신 전화 지연: %s</string>
+  <string name="pref_vm_heapsize_title">Dalvik 캐시 heapsize</string>
+  <string name="pref_vm_heapsize_summary">Dalvik VM에 대 한 액세스에는 캐시의 크기를 제어</string>
+  <string name="pref_vm_heapsize_alt_summary">Dalvik VM 캐시 크기: %s</string>
+  <string name="showbuild_title">열어서  Build.Prop 표시</string>
+  <string name="buildprop_summary">거기에 무슨 일 찾아서.</string>
+  <string name="showbuild_dialog">/System/Build.Prop 표시</string>
+  <string name="showbuild_loading">로드 build.prop\u2026</string>
+  <string name="showbuild_error">오류 로드 build.prop\u2026</string>
   <string name="showbuild_unknown">알 수 없음</string>
-  <string name="showbuild_version">Version</string>
-  <string name="showbuild_label">We should look because knowing is half the battle</string>
-  <string name="pref_fast_up_title">HSUPA upload speed hack</string>
-  <string name="pref_fast_up_summary">*WARNING* if you change this value it will add the needed values to your build.prop if they are not already present</string>
-  <string name="pref_fast_up_alt_summary">Fast up found active: %s</string>
-  <string name="pref_prox_delay_title">Proximity sensor delay</string>
-  <string name="pref_prox_delay_summary">When you are in-call screen is off when the device moves away from your face this delay value controls how long before screen turns on</string>
-  <string name="pref_prox_delay_alt_summary">Proximity sensor set to: %s</string>
-  <string name="pref_mod_version_title">Change your Build Number</string>
-  <string name="pref_mod_version_summary">This is astetic and doesn\'t improve the system</string>
-  <string name="pref_mod_version_alt_summary">Build Number: %s</string>
-  <string name="pref_sleep_title">PM Sleep mode</string>
-  <string name="pref_sleep_summary">Modify Nighttime sleep policy</string>
-  <string name="pref_sleep_alt_summary">Current Sleep Mode: %s</string>
-  <string name="pref_jit_title">Just In Time Complier</string>
-  <string name="pref_jit_summary">Enables/Disables JIT complier</string>
-  <string name="pref_tcp_stack_title">Optimize TCP Stack</string>
-  <string name="pref_tcp_stack_summary">Modify the buffer-size for better performance</string>
-  <string name="pref_g_speed_title">3G Speed Hack</string>
-  <string name="pref_g_speed_summary">Uncap 3g speed</string>
-  <string name="pref_gpu_title">GPU Acceleration</string>
-  <string name="pref_gpu_summary">Enable hardware acceleration where the GPU controls the UI instead of the CPU</string>
-  <string name="pref_lcd_title">Change LCD density</string>
-  <string name="pref_lcd_summary">Set your desired LCD density</string>
+  <string name="showbuild_version">버전 </string>
+  <string name="showbuild_label">우리 반은 승리한 것입니다 알고 있기 때문에 기대 한다</string>
+  <string name="pref_fast_up_title">HSUPA 업로드 속도 해킹</string>
+  <string name="pref_fast_up_summary">* 경고 * 이미 하지 않은 경우 그것 당신의 build.prop에 필요한 값을 추가할 것 이다이 값을 변경 하면 현재</string>
+  <string name="pref_fast_up_alt_summary">빠른 최대 활성 발견: %s</string>
+  <string name="pref_prox_delay_title">근접 센서 지연</string>
+  <string name="pref_prox_delay_summary">장치가 이동할 때 당신의 얼굴에서 얼마나 오래이 지연 값 제어 화면 켜 전에 통화 화면 꺼져 있습니다.</string>
+  <string name="pref_prox_delay_alt_summary">근접 센서 설정: %s</string>
+  <string name="pref_mod_version_title">빌드 번호를 변경</string>
+  <string name="pref_mod_version_summary">이 카운터 이며 시스템을 개선 하지 않습니다.</string>
+  <string name="pref_mod_version_alt_summary">빌드 번호: %s</string>
+  <string name="pref_sleep_title">오후 수 면 모드</string>
+  <string name="pref_sleep_summary">야간 수 면 정책 수정</string>
+  <string name="pref_sleep_alt_summary">현재 수 면 모드: %s</string>
+  <string name="pref_jit_title">시간 컴파일러에</string>
+  <string name="pref_jit_summary">활성화/비활성화 JIT 컴파일러</string>
+  <string name="pref_tcp_stack_title">TCP 스택을 최적화합니다</string>
+  <string name="pref_tcp_stack_summary">성능 향상을 위해 버퍼 크기를 수정</string>
+  <string name="pref_g_speed_title">3g 속도 해킹</string>
+  <string name="pref_g_speed_summary">3g 속도를 벗기다</string>
+  <string name="pref_gpu_title">GPU 가속</string>
+  <string name="pref_gpu_summary">GPU는 CPU 대신 UI를 제어 하는 하드웨어 가속을 사용 하도록 설정</string>
+  <string name="pref_lcd_title">LCD 밀도 변경</string>
+  <string name="pref_lcd_summary">원하는 LCD 밀도 설정</string>
   <string name="pref_lcd_default">480</string>
-  <string name="pref_lcd_alt_summary">Screen density: %s</string>
-  <string name="init_d_title">Init.d Tweaks</string>
+  <string name="pref_lcd_alt_summary">화면 밀도: %s</string>
+  <string name="init_d_title">init.d 트윅</string>
   <string name="pt_general">일반</string>
-  <string name="pt_zipalign_apks">Zipalign apps</string>
-  <string name="ps_zipalign_apks">Zipalign any unaligned apps on each boot</string>
-  <string name="pt_fix_permissions">Fix permissions</string>
-  <string name="ps_fix_permissions">Fix permissions on apps and their data on each boot</string>
-  <string name="pt_enable_sysctl">Enable sysctl</string>
-  <string name="ps_enable_sysctl">Enable sysctl tweaks at boot</string>
-  <string name="pt_free_mem">Free memory</string>
-  <string name="ps_free_mem">Set minfree values at boot</string>
-  <string name="pt_clear_data_cache">Clear cache</string>
-  <string name="ps_clear_data_cache">Clear application cache files each boot</string>
-  <string name="pt_enable_cron">Enable scheduled tasks</string>
-  <string name="ps_enable_cron">Enable scheduled cron jobs</string>
-  <string name="pt_sd_boost">Enable SD boost</string>
-  <string name="ps_sd_boost">Enable/disable SD card speed boost</string>
-  <string name="pt_file_system_speedups">File system speedup</string>
-  <string name="ps_file_system_speedups">Speed up file systems at boot</string>
-  <string name="pt_foreground_app_mem">Foreground app mem</string>
-  <string name="pt_visible_app_mem">Visible app mem</string>
-  <string name="pt_perceptible_app_mem">Perceptible app mem</string>
-  <string name="pt_heavy_weight_app_mem">Heavy weight app mem</string>
-  <string name="pt_secondary_server_mem">Secondary server app mem</string>
-  <string name="pt_backup_app_mem">Backup app mem</string>
-  <string name="pt_home_app_mem">Home app mem</string>
-  <string name="pt_hidden_app_mem">Hidden app mem</string>
-  <string name="pt_empty_app_mem">Empty app mem</string>
-  <string name="pt_read_ahead_kb">Read ahead value</string>
-  <string name="pt_minfree_values">Minfree values</string>
-  <string name="pt_battery">Enable battery tweaks</string>
-  <string name="ps_battery">Enable/disable battery saving tweaks</string>
-  <string name="pt_touch">Enable touch tweaks</string>
-  <string name="ps_touch">Enable/disable touchscreen tweaks</string>
-  <string name="pt_minfree">Enable minfree values</string>
-  <string name="ps_minfree">Enable/disable minfree tweaks</string>
-  <string name="pt_gpurender">Enable gpu render</string>
-  <string name="ps_gpurender">Enable/disable gpu rendering tweaks</string>
-  <string name="pt_sleepers">Enable sleeping</string>
-  <string name="ps_sleepers">Enable/disable sleeping tweaks</string>
-  <string name="pt_journalism">Enable journalism</string>
-  <string name="ps_journalism">Enable/disable journalism tweaks</string>
-  <string name="pt_sqlite3">Enable sqlite3</string>
-  <string name="ps_sqlite3">Enable/disable sqlite3 tweaks</string>
-  <string name="pt_wifisleep">Enable wifi sleep</string>
-  <string name="ps_wifisleep">Enable/disable wifi sleep tweaks</string>
-  <string name="pt_iostats">Enable iostats</string>
-  <string name="ps_iostats">Enable/disable iostats</string>
-  <string name="pt_setrenice">Enable setrenice</string>
-  <string name="ps_setrenice">Enable/disable setrenice</string>
-  <string name="pt_tweaks">Enable super tweaks</string>
-  <string name="ps_tweaks">Enable/disable super tweaks</string>
-  <string name="pt_speedy_modified">Enable speedy modified</string>
-  <string name="ps_speedy_modified">Enable/disable Speedy modified tweaks</string>
-  <string name="pt_loopy_smoothness_tweak">Enable loopy smoothness</string>
-  <string name="ps_loopy_smoothness_tweak">Enable/disable loopy smoothness tweaks</string>
-  <string name="pt_init_d_credits">Developed by:</string>
-  <string name="ps_init_d_credits">Jared Rummler (JRummy16)</string>
-  <string name="dt_init_d_error">Init.d error</string>
-  <string name="dm_init_d_error">It looks like init.d isn\'t setup properly. Blame Kenneth!</string>
-  <string name="db_exit">Exit</string>
+  <string name="pt_zipalign_apks">Zipalign 애플 리 케이 션</string>
+  <string name="ps_zipalign_apks">Zipalign 각 부팅에 어떤 정렬 되지 않은 애플 리 케이 션</string>
+  <string name="pt_fix_permissions">사용 권한 수정</string>
+  <string name="ps_fix_permissions">애플 리 케이 션 및 각 부팅에 그들의 데이터에 사용 권한 수정</string>
+  <string name="pt_enable_sysctl">Sysctl을 활성화</string>
+  <string name="ps_enable_sysctl">부팅시 sysctl 조작 가능</string>
+  <string name="pt_free_mem">무료 메모리</string>
+  <string name="ps_free_mem">부팅시 설정된 minfree 값</string>
+  <string name="pt_clear_data_cache">캐시를 지울까요?</string>
+  <string name="ps_clear_data_cache">각 부팅 응용 프로그램 캐시 파일을 지우려면</string>
+  <string name="pt_enable_cron">예약 된 작업을 사용 하도록 설정</string>
+  <string name="ps_enable_cron">예약 된 cron 일을 사용 하도록 설정</string>
+  <string name="pt_sd_boost">SD 부스트를 활성화</string>
+  <string name="ps_sd_boost">SD 카드 속도 부스트 사용/사용 중지</string>
+  <string name="pt_file_system_speedups">파일 시스템 속도 향상</string>
+  <string name="ps_file_system_speedups">부팅 시 파일 시스템을 속도</string>
+  <string name="pt_foreground_app_mem">전경 응용 프로그램 메모리</string>
+  <string name="pt_visible_app_mem">표시 애플 리 케이 션 메모리</string>
+  <string name="pt_perceptible_app_mem">인지할 수 있는 애플 리 케이 션 메모리</string>
+  <string name="pt_heavy_weight_app_mem">무거운 무게 애플 리 케이 션 메모리</string>
+  <string name="pt_secondary_server_mem">보조 서버 애플 리 케이 션 메모리</string>
+  <string name="pt_backup_app_mem">백업 응용 프로그램 메모리</string>
+  <string name="pt_home_app_mem">홈 애플 리 케이 션 메모리</string>
+  <string name="pt_hidden_app_mem">숨겨진된 애플 리 케이 션 메모리</string>
+  <string name="pt_empty_app_mem">빈 응용 프로그램 메모리</string>
+  <string name="pt_read_ahead_kb">미리 값을 읽어</string>
+  <string name="pt_minfree_values">Minfree 값</string>
+  <string name="pt_battery">배터리 조작 가능</string>
+  <string name="ps_battery">조작을 저장 배터리 사용/사용 중지</string>
+  <string name="pt_touch">터치 조작 가능</string>
+  <string name="ps_touch">설정/해제 터치 스크린 조작</string>
+  <string name="pt_minfree">Minfree 값 사용</string>
+  <string name="ps_minfree">Minfree 조작 사용/사용 중지</string>
+  <string name="pt_gpurender">Gpu 렌더링을 활성화</string>
+  <string name="ps_gpurender">Gpu 렌더링 조작 사용/사용 중지</string>
+  <string name="pt_sleepers">자 활성화</string>
+  <string name="ps_sleepers">자 조작 사용/사용 중지</string>
+  <string name="pt_journalism">저널리즘 활성화</string>
+  <string name="ps_journalism">활성화/비활성화 저널리즘 조작</string>
+  <string name="pt_sqlite3">Sqlite3 사용</string>
+  <string name="ps_sqlite3">Sqlite3 조작 사용/사용 중지</string>
+  <string name="pt_wifisleep">와이파이 잠자기 활성화</string>
+  <string name="ps_wifisleep">Wifi 절전 조작 사용/사용 중지</string>
+  <string name="pt_iostats">Iostats 활성화</string>
+  <string name="ps_iostats">Iostats 사용/사용 중지</string>
+  <string name="pt_setrenice">Setrenice 활성화</string>
+  <string name="ps_setrenice">Setrenice 사용/사용 중지</string>
+  <string name="pt_tweaks">슈퍼 조작 가능</string>
+  <string name="ps_tweaks">슈퍼 조작 사용/사용 중지</string>
+  <string name="pt_speedy_modified">활성화 빠른 수정</string>
+  <string name="ps_speedy_modified">활성화/비활성화를 스 피 디 조작 수정</string>
+  <string name="pt_loopy_smoothness_tweak">정신이 이상한 다듬기 사용</string>
+  <string name="ps_loopy_smoothness_tweak">활성화/비활성화 깨어나 부드럽게 조작합니다.</string>
+  <string name="pt_init_d_credits">에 의해 개발 된:</string>
+  <string name="ps_init_d_credits">제라드 Rummler (JRummy16)</string>
+  <string name="dt_init_d_error">Init.d 오류</string>
+  <string name="dm_init_d_error">Init.d 제대로 설치 되지 것 같습니다. Kenneth 비난!</string>
+  <string name="db_exit">\"나가기\"</string>
   <string-array name="entries_fast_up_explain">
     <item>제거</item>
-    <item>HSUPA Disabled (Capped)</item>
-    <item>HSUPA Enabled</item>
-    <item>HSUPA Enabled (Uncapped)</item>
+    <item>HSUPA 비활성화 (출장)</item>
+    <item>HSUPA 사용</item>
+    <item>HSUPA 활성화 (세척제)</item>
   </string-array>
   <string-array name="entries_prox_delay_explain">
     <item>제거</item>
@@ -867,7 +747,7 @@ causes the kernel to prefer to reclaim dentries and inodes.</item>
     <item>500</item>
   </string-array>
   <string-array name="entries_prox_delay">
-    <item>disable</item>
+    <item>사용 안 함</item>
     <item>0</item>
     <item>50</item>
     <item>75</item>
@@ -890,50 +770,50 @@ causes the kernel to prefer to reclaim dentries and inodes.</item>
   </string-array>
   <string-array name="entries_sleep_explain">
     <item>비활성화</item>
-    <item>Power Collapse Suspend</item>
-    <item>Power Collapse (Best)</item>
-    <item>Apps Sleep</item>
-    <item>Slow Clock</item>
-    <item>Wait For Interrupt</item>
+    <item>파워 붕괴 중단</item>
+    <item>파워 붕괴 (최고)</item>
+    <item>애플 리 케이 션 잠김</item>
+    <item>느린 시계</item>
+    <item>인터럽트에 대 한 대기</item>
   </string-array>
   <string-array name="entries_sleep">
-    <item>disable</item>
+    <item>사용 안 함</item>
     <item>0</item>
     <item>1</item>
     <item>2</item>
     <item>3</item>
     <item>4</item>
   </string-array>
-  <string name="mpdecision_category">MSM mpdecision and thermal</string>
+  <string name="mpdecision_category">Msm은 mpdecision 및 열</string>
   <string name="mpdecision_title">Mpdecision</string>
-  <string name="mpdecision_summary">In kernel hotplug control</string>
-  <string name="mpdec_general">Hotplug settings</string>
-  <string name="mpdec_enabled">Enable/Disable hotplug</string>
-  <string name="mpdec_min_cpu">Minimum CPUs online</string>
-  <string name="mpdec_max_cpu">Maximum CPUs online</string>
-  <string name="mpdec_scroff_single">Screen off single core</string>
-  <string name="mpdec_scroff_single_summary">Use only one core when the screen is off</string>
-  <string name="mpdec_touchboost">Touch boost</string>
-  <string name="mpdec_touchboost_summary">Touching the screen will boost the cpu for better responsiveness</string>
-  <string name="mpdec_boost_time">Touch boost time</string>
+  <string name="mpdecision_summary">커널 핫 플러그 제어</string>
+  <string name="mpdec_general">핫 플러그 설정</string>
+  <string name="mpdec_enabled">핫 플러그 사용/사용 중지</string>
+  <string name="mpdec_min_cpu">최소 Cpu 온라인</string>
+  <string name="mpdec_max_cpu">최대 Cpu 온라인</string>
+  <string name="mpdec_scroff_single">싱글 코어에서 화면</string>
+  <string name="mpdec_scroff_single_summary">화면 꺼졌을 때 하나의 코어만 사용 합니다.</string>
+  <string name="mpdec_touchboost">터치 부스트</string>
+  <string name="mpdec_touchboost_summary">화면을 건 드려 더 나은 응답 cpu를 높일 것입니다.</string>
+  <string name="mpdec_boost_time">터치 부스트 시간</string>
   <string name="mpdec_advanced_category">고급</string>
-  <string name="mpdec_advanced">Advanced settings</string>
-  <string name="mpdec_advanced_summary">View or change advance hotplug settings</string>
-  <string name="thermal_title">Thermal</string>
-  <string name="thermal_summary">In kernel thermal control</string>
-  <string name="thermal_general">Thermal thresholds</string>
-  <string name="thermal_enabled">Enable/Disable thermal</string>
-  <string name="thermal_enabled_summary">proceed with caution, if you disable this your phone might overheat due to no thermal throttling</string>
-  <string name="thermal_shutdown">Shutdown Temperature</string>
-  <string name="thermal_check">Check every (ms)</string>
-  <string name="thermal_low_limit">Low limit</string>
-  <string name="thermal_low_limit_clear">Low limit clear</string>
-  <string name="thermal_mid_limit">Mid limit</string>
-  <string name="thermal_mid_limit_clear">Mid limit clear</string>
-  <string name="thermal_max_limit">High limit</string>
-  <string name="thermal_max_limit_clear">High limit clear</string>
-  <string name="thermal_freq">Frequencies</string>
-  <string name="thermal_low_freq">Low limit frequency</string>
-  <string name="thermal_mid_freq">Mid limit frequency</string>
-  <string name="thermal_max_freq">High limit frequency</string>
+  <string name="mpdec_advanced">고급 설정</string>
+  <string name="mpdec_advanced_summary">사전 핫 플러그 설정을 보거나 변경</string>
+  <string name="thermal_title">터미널</string>
+  <string name="thermal_summary">커널 열 제어에</string>
+  <string name="thermal_general">열 임계값</string>
+  <string name="thermal_enabled">열 터미널 사용/사용 중지</string>
+  <string name="thermal_enabled_summary">신중 하 게 진행, 휴대폰 아무 열 제한으로 인해 과열 수 있습니다 이것을 해제 하면</string>
+  <string name="thermal_shutdown">종료 온도</string>
+  <string name="thermal_check">확인 모든 (ms)</string>
+  <string name="thermal_low_limit">낮은 한계</string>
+  <string name="thermal_low_limit_clear">낮은 제한 취소</string>
+  <string name="thermal_mid_limit">중반 제한</string>
+  <string name="thermal_mid_limit_clear">중반 한계 명확</string>
+  <string name="thermal_max_limit">높은 한계</string>
+  <string name="thermal_max_limit_clear">높은 한계 명확</string>
+  <string name="thermal_freq">주기</string>
+  <string name="thermal_low_freq">낮은 한계 주파수</string>
+  <string name="thermal_mid_freq">중반 한계 주파수</string>
+  <string name="thermal_max_freq">높은 한계 주파수</string>
 </resources>

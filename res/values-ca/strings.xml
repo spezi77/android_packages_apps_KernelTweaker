@@ -119,7 +119,7 @@
   </string-array>
   <string-array name="lmk_descs">
     <item>The application currently on the screen and running</item>
-    <item>The application that is open and running in background</item>
+    <item>L\'aplicació que està oberta i funcionant en segon plànol</item>
     <item>This is a service an application needs that is alive and ready</item>
     <item>An idle process that wakes up on application request</item>
     <item>Apps that provide data (content) to the system, like Facebook sync</item>
