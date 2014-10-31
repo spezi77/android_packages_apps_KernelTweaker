@@ -771,7 +771,7 @@ TCP использует механизм, называемый медленны
     <item>500</item>
   </string-array>
   <string-array name="entries_prox_delay">
-    <item>disable</item>
+    <item>отключить</item>
     <item>0</item>
     <item>50</item>
     <item>75</item>
@@ -801,7 +801,7 @@ TCP использует механизм, называемый медленны
     <item>Дождаться прерывания</item>
   </string-array>
   <string-array name="entries_sleep">
-    <item>disable</item>
+    <item>отключить</item>
     <item>0</item>
     <item>1</item>
     <item>2</item>

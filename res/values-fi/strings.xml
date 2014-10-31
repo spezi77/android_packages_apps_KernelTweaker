@@ -15,7 +15,7 @@
   <string name="qqq">qqq</string>
   <string name="set_on_boot">Aseta Käynnistyksessä</string>
   <string name="command">Commands list is empty.\n Tap the plus button to add a command</string>
-  <string name="system">System</string>
+  <string name="system">Järjestelmä</string>
   <string name="data">Tiedot</string>
   <string name="android_secure">Android Secure</string>
   <string name="boot">Käynnistys</string>

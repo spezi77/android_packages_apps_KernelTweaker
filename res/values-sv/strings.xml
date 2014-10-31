@@ -4,7 +4,7 @@
   <string name="app_name">Kernel Tweaker</string>
   <string name="action_settings">Inställningar</string>
   <string name="hello_world">Hej världen!</string>
-  <string name="blur_radius">Blur Radius</string>
+  <string name="blur_radius">Radius för suddighet</string>
   <string name="apply">Tillämpa</string>
   <string name="title">Titel</string>
   <string name="summary">Sammanfattning</string>
@@ -14,7 +14,7 @@
   <string name="empty">Den här mappen är tom!</string>
   <string name="qqq">qqq</string>
   <string name="set_on_boot">Aktivera vid start</string>
-  <string name="command">Commands list is empty.\n Tap the plus button to add a command</string>
+  <string name="command">Kommandon-listan är tom.\n Klicka på plus-knappen för att lägga till ett kommando</string>
   <string name="system">System</string>
   <string name="data">Data</string>
   <string name="android_secure">Android secure</string>
@@ -56,18 +56,18 @@
     <item>Information</item>
   </string-array>
   <string-array name="menu_descs">
-    <item>Frequencies time in state</item>
+    <item>Frekvenser tid i tillstånd</item>
     <item>Information om CPU</item>
     <item>Justera CPU parametrar</item>
     <item>Justera GPU parametrar</item>
     <item>Hantera CPU-spänning</item>
-    <item>Tweak Kernel Parameters</item>
-    <item>Tweak native task killer</item>
-    <item>VM Settings</item>
+    <item>Justera Kernel-parametrar</item>
+    <item>Justera den inbyggda processdödaren</item>
+    <item>VM-inställningar</item>
     <item>Granska värden vid uppstart</item>
     <item>Hantera vissa filtyper</item>
-    <item>Backup current kernel/recovery</item>
-    <item>Execute recovery stuff</item>
+    <item>Skapa en backup på den nuvarande kernel/återhämtning</item>
+    <item>Utför återställningsgrejer</item>
     <item>App-inställningar</item>
     <item>Informationer och krediter</item>
   </string-array>
@@ -100,7 +100,7 @@
   <string name="bk_recovery_desc">Gör en säkerhetskopia av nuvarande Recovery.img på extern lagring</string>
   <string name="bk_comp">Använd komprimering</string>
   <string name="bk_md5">Skippa MD5 skapandet</string>
-  <string name="list_command_empty">Commands list is empty.\n Tap the plus button to add a command</string>
+  <string name="list_command_empty">Kommandon-listan är tom.\n Klicka på plus-knappen för att lägga till ett kommando</string>
   <string name="emp_title">TOM</string>
   <string name="emp_desc">Inga gränsvärden vid uppstart</string>
   <string name="rc_title">Root hittades inte</string>
@@ -162,15 +162,15 @@
     <item>Lägsta CPU frekvensen kommer att användas. Du kan öka det för bättre prestanda eller sänka den för batteritid</item>
     <item>Detta styr skalningen av CPU frekvenser beroende på CPU load\n (Klicka för att Visa guvernörs förklaringar)</item>
     <item>Hur många kärnor går online när du rör skärmen</item>
-    <item>The threshold that controls when a core will be woked up. Higher the value, harder for CPU core to become online</item>
+    <item>Tröskeln som kontrollerar när en kärna ska bli uppväckt. Desto högre värde, desto svårare är det för CPU-kärnan att tas i bruk</item>
   </string-array>
   <string-array name="glo_gov_titles">
     <item>Prestanda</item>
     <item>Powersave</item>
-    <item>Userspace</item>
-    <item>Ondemand</item>
-    <item>Conservative</item>
-    <item>Interactive</item>
+    <item>Användarområde</item>
+    <item>OnDemand</item>
+    <item>Konservativa</item>
+    <item>Interaktiv</item>
     <item>Smartass</item>
   </string-array>
   <string-array name="glo_gov_descs">

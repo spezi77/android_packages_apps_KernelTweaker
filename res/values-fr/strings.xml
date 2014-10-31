@@ -212,14 +212,14 @@ Tout de même moins efficace que SmartassV2, la vitesse minimum du CPU écran al
     <item>Chaque fois qu\'une augmentation de la vitesse du CPU est nécessaire le gouverneur ordonnera au CPU d\'augmenter sa fréquence de freq_step % de la fréquence maximum autorisée.</item>
   </string-array>
   <string-array name="glo_interactive_titles">
-    <item>hispeed_freq</item>
+    <item>freq_haute</item>
     <item>go_hispeed_load</item>
     <item>min_sample_time</item>
     <item>timer_rate</item>
     <item>above_hispeed_delay</item>
-    <item>input_boost</item>
+    <item>Amplificateur d\'entrée</item>
     <item>boost</item>
-    <item>boostpulse</item>
+    <item>Amplificateur d\'impulsion</item>
   </string-array>
   <string-array name="glo_interactive_descs">
     <item>Une haute vitesse intermédiaire par laquelle le CPU passera si sa charge atteint la valeur spécifiée dans go_hispeed_load. Si la charge reste assez haute pendant la durée spécifiée dans above_hispeed_delay, la vitesse du CPU sera encore augmentée. La valeur par défaut est la vitesse maximum.</item>
@@ -266,10 +266,10 @@ Tout de même moins efficace que SmartassV2, la vitesse minimum du CPU écran al
     <item>Charge Rapide</item>
     <item>Intensité des vibrations</item>
     <item>temp_seuil</item>
-    <item>Headset_boost</item>
-    <item>Mic_boost</item>
-    <item>Speaker_boost</item>
-    <item>Volume_boost</item>
+    <item>Amplificateur Haut parleur</item>
+    <item>Amplificateur Micro</item>
+    <item>Amplificateur Micro Casque</item>
+    <item>Amplificateur de Volume</item>
   </string-array>
   <string-array name="pie_colors">
     <item>#ffffff</item>

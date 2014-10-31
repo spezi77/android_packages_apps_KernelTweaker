@@ -181,11 +181,7 @@ program running with UID root, to set the CPU to a specific frequency
 by making a sysfs file scaling_setspeed available in the CPU-device
 directory.</item>
     <item>Der CPU-Regler \"ondemand\" steuert die CPU abhängig von dem momentanen Leistungsbedarf. Dafür muss die CPU die Fähigkeit haben die Frequenzen sehr schnell umzuschalten.</item>
-    <item>The CPUfreq governor conservative, much like the ondemand
-governor, sets the CPU depending on the current usage.  It differs in
-behaviour in that it gracefully increases and decreases the CPU speed
-rather than jumping to max speed the moment there is any load on the
-CPU.  This behaviour more suitable in a battery powered environment.</item>
+    <item>Dieser Governor regelt die Frequenz, wie der Ondemand, bis auf das Maximum. Das Maximum wird allerdings bei einer Eingabe nicht sofort eingestellt, sondern schrittweise bis zum Maximum erhöht. Das schont den Akku, man muss aber erhebliche Abstriche bei der Performance machen.</item>
     <item>The CPUfreq governor interactive is designed for latency-sensitive,
 interactive workloads. This governor sets the CPU speed depending on
 usage, similar to ondemand and conservative governors.  However,
@@ -219,8 +215,8 @@ short-term load since idle exit to determine the cpu speed to ramp to.</item>
   </string-array>
   <string-array name="glo_ondemand_descs">
     <item>Abstand in us, wie oft der Kernel den CPU Leistungsbedarf prüft und daraus die Taktfrequenz ableitet. Höhere Werte bedeuten weniger häufige Abfragen. Bei niedrigen CPU-Frequenzen kann das von Vorteil sein (nicht zu häufige Frequenzwechsel), bei höhen CPU-Frequenzen ist es u.U. von Nachteil (längere Dauer beim Runterskalieren).</item>
-    <item>Measured in percentage from 1 to 100, When CPU load reaches this point, governor will scale CPU up. Higher value means less responsiveness and lower values corresponds to more responsiveness at the cost of battery. </item>
-    <item>Default value is 0. Setting a higher value will bias the governor towards lower frequency steps. Use this if you want CPU to spend less time on higher frequencies. A better alternative would be to underclock to a lower frequency than using powersave bias.</item>
+    <item>Gemessen in Prozent von 1 bis 100, erreicht die CPU-Auslastung diesen Wert, so erhöht der Governor die Leistung der CPU. Höhere Werte bewirken eine schlechtere Reaktionsfähigkeit, wohingegen niederere Werte die Reaktionsfähigkeit, auf Kosten des Akkus, steigern. </item>
+    <item>Standardwert ist 0. Höhere Werte lassen den Governor zu niedereren Frequenzen tendieren. Verwende diese Option, wenn du willst, dass deine CPU weniger Zeit auf hohen Frequenzen verbringt. Eine bessere Alternative dazu wäre das Underclocken auf eine niederere Frequenz.</item>
     <item>In the simplest form, sampling_down_factor determines how often CPU should stay at higher frequencies when truly busy. Default behavior is fast switching to lower frequencies (1). Having sampling_down_factor set to 1 makes no changes from existing behavior (for the non-modified ondemand), but having sampling_down_factor set to a value greater than 1 causes it to act as a multiplier for the scheduling interval for re-evaluating the load when the CPU is at its highest clock frequency (which is scaling_max_freq) due to high load. This improves performance by reducing the overhead of load evaluation and helping the CPU stay at its highest clock frequency when it is truly busy, rather than shifting back and forth in speed. This tunable has no effect on behavior at lower frequencies/lower CPU loads.</item>
     <item>This factor indirectly calculate the down-threshold of Ondemand. 
             After completing sampling-down-factor*sampling-rate at max frequency because of high load, 
@@ -373,9 +369,9 @@ default value of 20 it means that if the CPU usage needs to be below
     <item>This parameter will change the vibration strength. Increasing this value means a stronger vibration feedback. Minimum values is 0, maximum 100</item>
     <item>Maximum CPU temperature before the CPU gets throttled down to become cooler. Values are in °C</item>
     <item>Increase or decrease headsets gain. Values from -20 to 20</item>
-    <item>Increase or decrease microphone gain. Values from -20 to 20</item>
+    <item>Erhöhe oder reduziere die Mikrofonverstärkung. Werte von -20 bis 20</item>
     <item>Increase or decrease speaker gain. Values from -20 to 20</item>
-    <item>Increase or decrease volume gain. Values from -20 to 20</item>
+    <item>Erhöhe oder reduziere die Lautstärke. Werte von -20 bis 20</item>
   </string-array>
   <string-array name="glo_sched_titles">
     <item>Noop</item>
@@ -891,7 +887,7 @@ causes the kernel to prefer to reclaim dentries and inodes.</item>
     <item>Wait For Interrupt</item>
   </string-array>
   <string-array name="entries_sleep">
-    <item>disable</item>
+    <item>deaktivieren</item>
     <item>0</item>
     <item>1</item>
     <item>2</item>

@@ -181,15 +181,16 @@
     <item>CPU  频率调节器 conservative 与 ondemand 非常相似，也是根据使用率来确定 CPU 频率。不同之处在于，它是优雅地增加或降低 CPU 的速度，而不是在 CPU 有任何负载的时候直接跳至最大速度。这种方式更适合于电池供电的情况。</item>
     <item>CPU 频率调节器 interactive 是为延迟敏感的、交互式工作负载 而设计的。该调节器根据使用率来设置 CPU 速度，与 ondemand 和 conservative 调节器类似。然而，在响应 CPU 密集的活动时，该调节器在升高 CPU 速度方面更积极。
 其余太多，不翻译了。</item>
-    <item>Result of Erasmux rewriting the complete code of interactive governor.
-             Main goal is to optimize battery life without comprising performance. 
-             Still, not as battery friendly as smartassV2 since screen-on minimum frequency is greater than frequencies used during screen-off. Smartass would jump up to highest frequency too often as well.</item>
+    <item>重新写入互动调速的完整代码由Erasmux发布。
+主要目标是优化电池寿命但不包含性能。
+但电池在smartassV2于屏幕开启使用最小频率并不友好。 
+Smartass将过于频繁的蹿升至最高频率。</item>
   </string-array>
   <string-array name="glo_ondemand_titles">
     <item>采样频率</item>
-    <item>up_threshold</item>
-    <item>powersave_bias</item>
-    <item>sampling_down_factor</item>
+    <item>最大阀值</item>
+    <item>省电倾向</item>
+    <item>负载取样</item>
     <item>down_differential</item>
     <item>freq_step</item>
   </string-array>
@@ -209,7 +210,7 @@
     <item>Whenever up-scaling logic is triggered the governor instructs the CPU to raise its frequency by freq_step percentage of max allowed frequency.</item>
   </string-array>
   <string-array name="glo_interactive_titles">
-    <item>hispeed_freq</item>
+    <item>高速频率</item>
     <item>go_hispeed_load</item>
     <item>min_sample_time</item>
     <item>timer_rate</item>
@@ -264,23 +265,21 @@ default value of 20 it means that if the CPU usage needs to be below
   </string-array>
   <string-array name="glo_gpu_titles">
     <item>GPU 最大频率</item>
-    <item>up_threshold</item>
+    <item>最大阀值</item>
     <item>down_threshold</item>
     <item>sample_time_ms</item>
   </string-array>
   <string-array name="glo_gpu_descs">
     <item>The maximum clock that the GPU can use. Reduce this frequency for better battery life at cost of performance</item>
     <item>When the GPU load is equal or above this value the GPU governor will increase the frequency</item>
-    <item>When the GPU load is equal or above this value the GPU governor will decrease the frequency</item>
-    <item>This is how often the governor polls for the GPU load. Increase for battery life, decrease for performance. 1000 equals 1 second.</item>
+    <item>GPU 负载时等于或高于此值 GPU 调速器会降低频率</item>
+    <item>这是调速器为 GPU 负载的采样频率。增加电池使用寿命，降低性能。1000 相当于 1 秒。</item>
   </string-array>
   <string-array name="glo_uv_titles">
     <item>降压</item>
   </string-array>
   <string-array name="glo_uv_descs">
-    <item>UnderVolt table allows you to change the voltage parameter of every frequency. This means that you can set, for every frequency, how much current the CPU 
-            must use. Lowering voltages means some battery saving, but you are warned! Lowering frequencies too much can make your device crash or freeze, so proceed with little steps 
-            until you find your ideal spot. Hit the \"Set on boot\" option ONLY after some tests or your device will freeze/crash on next reboot!</item>
+    <item>UnderVolt 表允许您更改每个频率的电压参数。这意味着您可以设置，对于每个频率，当前多大电流供给CPU。降低电压意味着省电，但是您会收到警告 ！太多降低频率，可以使您的设备崩溃或冻结，每次只调一点点，直到你找到你理想平衡点。点击\"在启动时应用\"选项将会在您的您下次重启时应用，有可能导致冻结/损坏！</item>
   </string-array>
   <string-array name="glo_kernel_titles">
     <item>I/O 调度器</item>
@@ -355,7 +354,7 @@ default value of 20 it means that if the CPU usage needs to be below
   </string-array>
   <string-array name="glo_sched_titles">
     <item>Noop</item>
-    <item>Deadline</item>
+    <item>截止期限</item>
     <item>CFQ</item>
     <item>BFQ</item>
     <item>SIO</item>
